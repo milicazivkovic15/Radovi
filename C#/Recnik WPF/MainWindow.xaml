@@ -1,0 +1,52 @@
+﻿<Window x:Class="RecnikWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Studenti" Height="567" Width="1185.588">
+    <Grid Margin="0,0,2,2" >
+        <GroupBox Header="Slisak studenata:" Height="502" HorizontalAlignment="Left" Margin="12,12,0,0" Name="groupBox2" VerticalAlignment="Top" Width="487">
+            <Grid>
+                <Label Content="Ime i prezime:" Height="28" HorizontalAlignment="Left" Margin="10,36,0,0" Name="label1" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="88,41,0,0" Name="textBox_ImeIPrezime" VerticalAlignment="Top" Width="120" />
+                <Label Content="Broj indeksa:" Height="28" HorizontalAlignment="Left" Margin="6,13,0,0" Name="label2" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="88,13,0,0" Name="textBox_brojIndeksa" VerticalAlignment="Top" Width="120" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="137,74,0,0" Name="textBox_BrojPolozenihIspita" VerticalAlignment="Top" Width="120" />
+                <Label Content="Broj polozenih ispita:" Height="28" HorizontalAlignment="Left" Margin="10,70,0,381" Name="label_"  />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="137,103,0,0" Name="textBox_Prosek" VerticalAlignment="Top" Width="120" />
+                <Label Content="Prosek:" Height="28" HorizontalAlignment="Left" Margin="10,99,0,352" Name="label4"  />
+                <GroupBox Header="Vrsta studija:" Height="67" HorizontalAlignment="Left" Margin="277,6,0,0" Name="groupBox1" VerticalAlignment="Top" Width="169">
+                    <Grid>
+                        <RadioButton Content="Matematika" HorizontalAlignment="Left" IsChecked="True" Margin="6,6,0,22" Name="radioButton_Matematika" />
+                        <RadioButton Content="Informatika" Height="16" HorizontalAlignment="Left" Margin="6,24,0,0" Name="radioButton_Informatika" VerticalAlignment="Top" />
+                    </Grid>
+                </GroupBox>
+                <Button Content="Dodaj" Height="27" HorizontalAlignment="Left" Margin="281,113,0,0" Name="button_Dodaj" VerticalAlignment="Top" Width="159" Click="button_Dodaj_Click"  />
+                <ListBox Height="205" HorizontalAlignment="Left" Margin="10,169,0,0" Name="listBox_Matematika" VerticalAlignment="Top" Width="209" />
+                <ListBox Height="205" HorizontalAlignment="Left" Margin="250,169,0,0" Name="listBox_Informatika" VerticalAlignment="Top" Width="209" />
+                <Label Content="Matematika:" Height="28" HorizontalAlignment="Left" Margin="10,146,0,0" Name="label5" VerticalAlignment="Top" />
+                <Label Content="Informatika:" Height="28" HorizontalAlignment="Left" Margin="250,146,0,0" Name="label6" VerticalAlignment="Top" />
+                <Button Content="Dodaj iz fajla" Height="27" HorizontalAlignment="Left" Margin="281,80,0,0" Name="button_DodajIzFajla" VerticalAlignment="Top" Width="159" Click="button_DodajIzFajla_Click"  />
+                <Label Content="Indeks:" Height="28" HorizontalAlignment="Left" Margin="10,382,0,0" Name="label3" VerticalAlignment="Top" />
+                <TextBox Height="23" Margin="63,386,353,0" Name="textBoxindeksMatematika" VerticalAlignment="Top" />
+                <Button Content="Prikazi" Height="24" HorizontalAlignment="Left" Margin="137,386,0,0" Name="buttonPrikaziStudentaMatematike" VerticalAlignment="Top" Width="82" Click="buttonPrikaziStudentaMatematike_Click" />
+                <TextBlock Height="27" HorizontalAlignment="Left" Margin="10,416,0,0" Name="textBlockPrikazMatematika" Text="" VerticalAlignment="Top" Width="209" />
+                <Label Content="Matematika:" Height="28" Margin="9,445,386,0" Name="label7" VerticalAlignment="Top" />
+                <Label Content="Informatika:" Height="28" Margin="256,445,145,0" Name="label8" VerticalAlignment="Top" />
+                <Label Content="0" Height="28" HorizontalAlignment="Right" Margin="0,445,371,0" Name="label_BrojStudenataNaMatematici" VerticalAlignment="Top" />
+                <Label Content="0" Height="28" HorizontalAlignment="Right" Margin="0,445,128,0" Name="label_BrojStudenataNaInformatici" VerticalAlignment="Top" />
+                <Label Content="Indeks:" Height="28" HorizontalAlignment="Left" Margin="256,383,0,0" Name="label9" VerticalAlignment="Top" />
+                <TextBox Height="23" Margin="309,387,107,0" Name="textBoxIndeksInformatika" VerticalAlignment="Top" />
+                <Button Content="Prikazi" Height="24" HorizontalAlignment="Left" Margin="383,387,0,0" Name="buttonPrikayiStudentaInformatike" VerticalAlignment="Top" Width="82" Click="buttonPrikayiStudentaInformatike_Click" />
+                <TextBlock Height="27" HorizontalAlignment="Left" Margin="256,417,0,0" Name="textBlockInformatika" Text="" VerticalAlignment="Top" Width="209" />
+            </Grid>
+        </GroupBox>
+        <ListBox Height="446" Margin="514,62,244,0" Name="listBox_Rezultat" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="579,29,0,0" Name="comboBox_IzborOpcijePrikaza" VerticalAlignment="Top" Width="353" SelectionChanged="comboBox_IzborOpcijePrikaza_SelectionChanged">
+            <ComboBoxItem Content="Prikazi sve studente sa Instituta za Matematiku i informatiku" />
+            <ComboBoxItem Content="Prikazi studente informatike koji imaju vise od 10 polozenih ispita i prosek veci od 7.5" />
+            <ComboBoxItem Content="Prikazi studente matematike koji su se upisali posle 2012 godine i imaju prosek veci od 8" />
+            <ComboBoxItem Content="Prikazi sve indekse sa Matematike (koristiti implicitnu konverziju tipova)" />
+        </ComboBox>
+        <Label Content="Filter:" Height="28" HorizontalAlignment="Left" Margin="514,28,0,0" Name="label10" VerticalAlignment="Top" />
+        <Button x:Name="button" Content="PROBA" HorizontalAlignment="Left" Margin="1001,64,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+    </Grid>
+</Window>

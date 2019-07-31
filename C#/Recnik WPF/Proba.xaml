@@ -1,0 +1,29 @@
+﻿<Window x:Class="RecnikWPF.Proba"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecnikWPF"
+        mc:Ignorable="d"
+        Title="Proba" Height="300" Width="401.031">
+    <Grid>
+        <Button x:Name="button" Content="Dodaj" HorizontalAlignment="Left" Margin="13,205,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <TextBox x:Name="index" HorizontalAlignment="Left" Height="23" Margin="87,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="upisan" HorizontalAlignment="Left" Height="23" Margin="87,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="jmbg" HorizontalAlignment="Left" Height="23" Margin="87,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="godine" HorizontalAlignment="Left" Height="23" Margin="87,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="Index" HorizontalAlignment="Right" Margin="0,35,318,0" VerticalAlignment="Top" Width="62"/>
+        <Label x:Name="label1" Content="Upisan" HorizontalAlignment="Left" Margin="13,74,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="JMBG" HorizontalAlignment="Left" Margin="13,118,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Godine" HorizontalAlignment="Left" Margin="13,154,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button1" Content="Zaposli" HorizontalAlignment="Left" Margin="109,205,0,0" VerticalAlignment="Top" Width="78" Click="button1_Click"/>
+        <Label x:Name="label4" Content="JMBG studenta" HorizontalAlignment="Left" Height="23" Margin="234,35,0,0" VerticalAlignment="Top" Width="128"/>
+        <TextBox x:Name="jmbgS" HorizontalAlignment="Left" Height="23" Margin="234,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"/>
+        <Label x:Name="label5" Content="JMBG zaposlenog" HorizontalAlignment="Left" Height="26" Margin="234,118,0,0" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:Name="jmbgZ" HorizontalAlignment="Left" Height="23" Margin="234,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98"/>
+        <Label x:Name="label6" Content="Broj godina:" HorizontalAlignment="Left" Height="32" Margin="225,202,0,0" VerticalAlignment="Top" Width="107"/>
+        <Label x:Name="br_godina" Content="" HorizontalAlignment="Left" Height="29" Margin="337,205,0,0" VerticalAlignment="Top" Width="35"/>
+        <Button x:Name="button2" Content="Izracunaj" HorizontalAlignment="Left" Height="20" Margin="234,239,0,0" VerticalAlignment="Top" Width="110" Click="button2_Click"/>
+
+    </Grid>
+</Window>
