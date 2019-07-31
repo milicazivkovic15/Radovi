@@ -1,0 +1,11 @@
+
+public enum NazivIgara {
+	DAME,
+	MAX,
+	MIN,
+	REDJANJE,
+	SESTARUKAIKRALJSRCE,
+	SVASRCA,
+	ZACATREF;
+	
+}
