@@ -1,0 +1,1025 @@
+﻿<?xml version="1.0" ?>
+
+<catalog>
+    <hotel id="H1">
+        <ime>Car Royal Apartments</ime>
+        
+        <zvezdica>3</zvezdica>
+        
+        <ocena>5</ocena>
+        
+        <grad>Novi Sad, 21000</grad>
+        
+        <ulica>Cara Dusana 71</ulica>
+        
+        <najboljaCena>59 € /noc</najboljaCena>
+        
+        <sobe id="soba1">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>59</cena>
+        </sobe>
+        <sobe id="soba2">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>69</cena>
+        </sobe>
+        <sobe id="soba3">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>117</cena>
+        </sobe>
+        <sobe id="soba4">
+            <brojKreveta>3</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>120</cena>
+        </sobe>
+        <sobe id="soba5">
+            <brojKreveta>3</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>133</cena>
+        </sobe>
+        <sobe id="soba6">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>139</cena>
+        </sobe>
+        
+        <brojSoba>13</brojSoba>
+        
+            <uHotelu>
+               Klima uredjaji, Osoblje koje govori vise jezika, Turisticke informacije
+            </uHotelu>
+            <uSobama>
+                Grejanje, Mini bar
+            </uSobama>
+        
+        <opis>
+            Lokacija Nekretnine Kada ostanete na Car Roial apartmana u Novom Sadu, bićete povezani sa kongresnog centra i pogodan za Univerzitet u Novom Sadu i Karađorđevog stadiona. Ovaj 4-star Apartment je u neposrednoj blizini Vojvodine Muzej i Petrovaradin Fortress.Rooms se kao kod kuće u jednom od 13 klimatizovanim prostorijama karakterišu frižidera i mini-barom. Besplatan bežični pristup internetu omogućava vezu, i satelitski program je dostupan za zabavu. Privatni kupatila imaju duboke potapanjem kade i šminka / brijanje ogledala. Pogodnosti uključuju direktan biranja telefone, kao i sefova i desks.Business, Other Amenities Posebne pogodnosti uključuju Kolevka, ekpress check-out, i besplatne novine u predvorju. Roundtrip aerodrom transfer je obezbeđen za doplatu (dostupno na zahtev), i besplatan parking je dostupan na licu mesta.
+        </opis>
+     
+        <komentar id="komentar1">
+            <pasus>
+                Soumya North Florence, Alabama, United States Trip type: Business
+                It was an excellent stay  4 of 5 stars Oct 12, 2015 I stayed there 2 nights and it was excellent,its near by novi sad beach which is beach on Danube river,petrovaradin castle is also reachable by walking.They also provide breakfast which is typical serbian breakfast,and internet is good also.The bus number 11 i guess go to this location from bus stop.
+            </pasus>
+        </komentar>
+        <komentar id="komentar2">
+           <pasus>
+               Mirjana007 Belgrade, Serbia Trip type: Couples
+               Car apartments  4 of 5 stars Sep 20, 2015 Excellent location, very clean and spacious rooms, kindest staff, a parking place if you travel by car. WiFi available for free all the time. TV was not working, but we didn't really need one :) 24-hour reception desk.
+           </pasus>
+        </komentar>
+        <komentar id="komentar3">
+            <pasus>
+                Damjan Beograd Trip type: Friends getaway
+                *For a great 2-3 day stay at Novi Sad*  4 of 5 stars Oct 20, 2013 The apartmants are VERY clean; with A/C - TV -MiniBar - There is a car garage as well, but Novi Sad is safe you can leave your car in front of the apartmant complex.. Staff is well organized and the location is great. Close to the city center so you can use a taxi to get around.. -Taxi is cheap.
+            </pasus>
+        </komentar> 
+       
+     <slike id="slike2" >
+            <putanja>NSCarRoyal2.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>NSCarRoyal1.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>NSCarRoyal3.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>NSCarRoyal4.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>NSCarRoyal5.jpg</putanja>
+        </slike> 
+    </hotel>
+    
+    
+    
+    
+    <hotel id="H2">
+	<ime>Best Western My Place</ime>
+	
+        <zvezdica>4</zvezdica>
+	
+        <ocena>5</ocena>
+	
+        <grad>Nis, 18000</grad>
+	
+        <ulica>Kej 29 Decembar Bb</ulica>
+	
+        <najboljaCena>58 € /noc</najboljaCena>
+        
+        <sobe id="soba11">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>58</cena>
+	</sobe>
+	<sobe id="soba12">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>65</cena>
+	</sobe>
+	<sobe id="soba13">
+            <brojKreveta>3</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>89</cena>
+	</sobe>
+	<sobe id="soba14">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>105</cena>
+	</sobe>
+	
+        <brojSoba>30</brojSoba>
+
+                <uHotelu>
+                     Klima uredjaji, Osoblje koje govori vise jezika, Turisticke informacije, SpaCentar
+		</uHotelu>
+		<uSobama>
+                    
+                </uSobama>
+		
+	<opis>
+	</opis>
+        
+	<komentar id="komentar1">
+              <pasus>
+                  Odlican hotel za boravak. Nemamo zamerki. Lokacija fenomenalna.
+              </pasus>
+	</komentar>
+	<komentar id="komentar2">
+            <pasus>
+                Uvek ljubazno osoblje i odlican dorucak.
+            </pasus>
+	</komentar>
+	<komentar id="komentar3">
+            <pasus>
+                Blizina centra, parking, komforna soba, kupatilo je odlicno, dorucak je obiman i raznovrstan. Pored je i neki restoran sa odlicnom picom. Kad budem isao u Nis, ovde cu prvo da proverim da li ima slobodnih mesta.
+            </pasus>
+	</komentar>
+	
+	<slike id="slike2" >
+            <putanja>Nishotel1.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Nishotel2.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Nishotel3.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Nishotel4.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Nishotel5.jpg</putanja>
+        </slike> 
+        <slike id="slike2" >
+            <putanja>Nishotel6.jpg</putanja>
+        </slike>  
+        <slike id="slike2" >
+            <putanja>Nishotel7.jpg</putanja>
+        </slike>    
+    
+    </hotel>
+    
+    
+    
+    
+    
+    
+    
+    <hotel id="H3">
+	
+        <ime>Hotel Inex</ime>
+	
+        <zvezdica>3</zvezdica>
+	
+        <ocena>3</ocena>
+	
+        <grad>Negotin, 19300</grad>
+	
+        <ulica>Trg Djordja Stanojevica 1</ulica>
+	
+        <najboljaCena>19 € /noc</najboljaCena>
+	
+        <sobe id="soba31">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>19</cena>
+	</sobe>
+	<sobe id="soba32">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>33</cena>
+	</sobe>
+	<sobe id="soba33">
+            <brojKreveta>3</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>49</cena>
+	</sobe>
+        
+	 <brojSoba>80</brojSoba>
+      
+                <uHotelu>
+                   Klima uredjaji, Turisticke informacije
+		</uHotelu>
+		<uSobama>
+		
+		</uSobama>
+		
+	<opis>
+            0,3km od samog centra grada, hale sportova, bolnice i gradskog parka.preko puta gradske poste i muzicke akademije.
+	</opis>
+	
+        <komentar id="komentar1">
+            <pasus>
+                Sve je blizu.U okviru objekta je obezbeрen i besplatan parking. U istoj zgradi nalaze se frizerski salon, veliki supermarket i menjaиnica.
+            </pasus>
+	</komentar>
+	<komentar id="komentar2">
+            <pasus>
+                U samom centru grada ali sobe bi trebalo malo poboljsati.
+            </pasus>
+	</komentar>
+	<komentar id="komentar3">
+            <pasus>
+                Ocekivanja su bila veca, restoran i bar obecavaju dok su sobe u oceni 2 od 5.
+            </pasus>
+	</komentar>
+	
+        <slike id="slike2" >
+            <putanja>Inex1.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Inex2.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Inex3.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Inex4.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Inex5.jpg</putanja>
+        </slike>
+        <slike id="slike2" >
+            <putanja>Inex6.jpg</putanja>
+        </slike> <slike id="slike2" >
+            <putanja>Inex7.jpg</putanja>
+        </slike>    
+        
+    </hotel>
+        
+    <hotel id="H4">
+        <ime>Hotel Dash</ime>
+
+        <zvezdica>5</zvezdica>
+
+        <ocena>5</ocena>
+
+        <grad>Novi Sad, 21000</grad>
+
+        <ulica>Vrsacka 11</ulica>
+
+        <najboljaCena>38 € /noc</najboljaCena>
+
+        <sobe id="soba41">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>38</cena>
+	</sobe>
+	<sobe id="soba42">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>41</cena>
+	</sobe>
+	<sobe id="soba43">
+            <brojKreveta>3</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>54</cena>
+	</sobe>
+	<sobe id="soba44">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>43</cena>
+	</sobe>
+        
+	 <brojSoba>25</brojSoba>
+     
+                <uHotelu>
+                  Klima uredjaji, Osoblje koje govori vise jezika, Turisticke informacije
+		</uHotelu>
+		<uSobama>
+                	Grejanje, Mini bar
+		</uSobama>
+	
+        <opis>
+	</opis>
+        
+	<komentar id="komentar1">
+            <pasus>
+                Usluga je savrsena, djevojke su jako ljubazne, sve je jako cisto, hotel ima jako dobre sadrzaje za odmor i relaksaciju.
+            </pasus>
+	</komentar>
+	<komentar id="komentar2">
+            <pasus>
+                Internet konekcija je jako slaba, i jastuci su neudobni.
+            </pasus>
+	</komentar>
+        
+	<slike id="slike2" >
+            <putanja>NoviSad1.jpeg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>NoviSad2.jpeg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>novisad3.jpeg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>novisad4.jpeg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>novisad5.jpeg</putanja>
+        </slike>   
+        <slike id="slike2" >
+            <putanja>novisad6.jpeg</putanja>
+        </slike>   
+        <slike id="slike2" >
+            <putanja>novisad7.jpeg</putanja>
+        </slike>   
+        <slike id="slike2" >
+            <putanja>novisad8.jpeg</putanja>
+        </slike>   
+        
+    </hotel>
+        
+      
+    <hotel id="H5">
+	<ime>Orbis Design Hotel i Spa</ime>
+	<zvezdica>4</zvezdica>
+	<ocena>5</ocena>
+	<grad>Paracin, 35250</grad>
+	<ulica>Svetog Save 2</ulica>
+	<najboljaCena>66 € /noc</najboljaCena>
+	<sobe id="soba51">
+	<brojKreveta>1</brojKreveta>
+	<dorucak>da</dorucak>
+	<cena>74</cena>
+	</sobe>
+	<sobe id="soba52">
+	<brojKreveta>2</brojKreveta>
+	<dorucak>da</dorucak>
+	<cena>92</cena>
+	</sobe>
+	<sobe id="soba53">
+	<brojKreveta>3</brojKreveta>
+	<dorucak>da</dorucak>
+	<cena>123</cena>
+	</sobe>
+	 <brojSoba>24</brojSoba>
+        
+            <uHotelu>
+                Klima uredjaji, Turisticke informacije, Spa Centar
+		</uHotelu>
+		<uSobama>
+		Grejanje, Mini Bar, Usluga 24/7
+		</uSobama>
+	
+        <opis>
+                        Hotel sa spa centrom Orbis Design se nalazi u Paracinu. Poseduje zatvoreni bazen, spa i velnes centar. Gosti mogu besplatno koristiti bezici internet i parking u okviru objekta.
+
+                Sve sobe su klimatizovane i imaju prostor za sedenje, mini-bar i flat-screen TV sa kablovskim kanalima. Kupatila u sobama sadrze fen za kosu, papuce, bade-mantile i besplatan toaletni pribor. Iz soba se pruza pogled na reku i na grad. Gostima su takodje na raspolaganju restoran, recepcija koja radi non-stop i ostava za prtljag.
+
+                Gosti koji vole pozoriste mogu stici do Pozorista Paracin pesice za 7 minuta od hotela sa spa centrom Orbis Design.
+
+                Objekat je udaljen 176 km od Aerodroma Nikola Tesla u Beogradu. Do zeleznicke stanice u Paracinu se pesice stize za 16 minuta.
+	</opis>
+	  <komentar id="komentar1">
+                <pasus>
+                    Odlican preporucujem.
+                </pasus>
+	</komentar>
+	<komentar id="komentar2">
+            <pasus>
+                Odseli smo ovde na dva dana, nismo pogresili usluga i hotel su na nivou svetskih.
+                
+            </pasus>
+	</komentar>
+	<komentar id="komentar3">
+            <pasus>
+                Obroci su mali, sve stalo je savrseno.
+            </pasus>
+	</komentar>
+	
+	<slike id="slike2" >
+            <putanja>paracin1.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>paracin2.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>paracin3.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>paracin4.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>paracin5.jpg</putanja>
+        </slike>    
+        
+	<slike id="slike2" >
+            <putanja>paracin6.jpg</putanja>
+        </slike>    
+	<slike id="slike2" >
+            <putanja>paracin7.jpg</putanja>
+        </slike>    
+	<slike id="slike2" >
+            <putanja>paracin8.jpg</putanja>
+        </slike>    
+	
+    </hotel>  
+          
+              
+     
+     <hotel id="H6">
+	<ime>Hotel Turist</ime>
+	
+        <zvezdica>4</zvezdica>
+	
+        <ocena>4</ocena>
+	
+        <grad>Kraljevo, 36000</grad>
+	
+        <ulica>Trg Srpskih Ratnika 1</ulica>
+	
+        <najboljaCena>64 € /noc</najboljaCena>
+	
+        <sobe id="soba61">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>64</cena>
+	</sobe>
+	<sobe id="soba62">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>87</cena>
+	</sobe>
+	<sobe id="soba63">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>98</cena>
+	</sobe>
+	
+        <brojSoba>72</brojSoba>
+    
+            <uHotelu>
+                Klima uredjaji,Turisticke informacije,Fitnes i Spa,3 Konferenciske sale
+            </uHotelu>
+            <uSobama>
+		Grejanje,Dozvoljeno pusenje
+            </uSobama>
+	    
+        <opis>
+        </opis>
+        
+        <komentar id="komentar1">
+            <pasus>
+             </pasus>
+        </komentar>
+        <komentar id="komentar2">
+           <pasus>
+           </pasus>
+        </komentar>
+        <komentar id="komentar3">
+            <pasus>
+            </pasus>
+        </komentar> 
+      
+	<slike id="slike2" >
+            <putanja>kraljevo1.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>kraljevo2.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>kraljevo3.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>kraljevo4.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>kraljevo5.jpg</putanja>
+        </slike>  
+        <slike id="slike2" >
+            <putanja>kraljevo6.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>kraljevo7.jpg</putanja>
+        </slike>      
+        <slike id="slike2" >
+            <putanja>kraljevo8.jpg</putanja>
+        </slike>    
+    </hotel>
+    
+    
+    
+    <hotel id="H7">
+        <ime>Garni Hotel Leopold I</ime>
+        
+        <zvezdica>5</zvezdica>
+        
+        <ocena>5</ocena>
+        
+        <grad>Novi Sad, 21000</grad>
+        
+        <ulica>Petrovaradinska tvrdjava bb</ulica>
+        
+        <najboljaCena>134 € /noc</najboljaCena>
+        
+        <sobe id="soba1">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>145</cena>
+        </sobe>
+        <sobe id="soba2">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>160</cena>
+        </sobe>
+        <sobe id="soba3">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>198</cena>
+        </sobe>
+        <sobe id="soba4">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>211</cena>
+        </sobe>
+        
+        <brojSoba>26</brojSoba>
+        
+            <uHotelu>
+               Klima uredjaji, Osoblje koje govori vise jezika, Turisticke informacije, Konferenciske sale
+            </uHotelu>
+            <uSobama>
+                Grejanje, Mini bar, Usliga 24/7
+            </uSobama>
+        
+        <opis>
+            Sa boravkom u Garni Hotel Leopold I u Novom Sadu , bicete u istorijskom delu i minuta od Petrovaradinske tvrdjave , a blizu Muzeju Vojvodine . Ovaj 5 -star hotel u neposrednoj blizini crkve Bogorodice i Narodnog pozorista Srbije .
+        </opis>
+     
+        <komentar id="komentar1">
+            <pasus>
+                Usluga je savrsena, djevojke su jako ljubazne, sve je jako cisto, hotel ima jako dobre sadrzaje za odmor i relaksaciju
+            </pasus>
+        </komentar>
+        <komentar id="komentar2">
+           <pasus>
+              Veoma dobar, sve pohvale. Ali se sve pogodnosti doplacuju. Sve ostalo odlican 5
+           </pasus>
+        </komentar>
+        <komentar id="komentar3">
+            <pasus>
+                Internet konekcija je jako slaba, i jastuci su neudobni.
+            </pasus>
+        </komentar> 
+       
+        
+        <slike id="slike2" >
+            <putanja>beograd13.jpeg</putanja>
+        </slike> 
+     <slike id="slike2" >
+            <putanja>Beograd11.jpeg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>beogad12.jpeg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>beograd12.jpeg</putanja>
+        </slike>
+ </hotel>
+ 
+ 
+ 
+     <hotel id="H8">
+        <ime>Queen's Astoria Design Hotel</ime>
+        
+        <zvezdica>4</zvezdica>
+        
+        <ocena>5</ocena>
+        
+        <grad>Beograd, 11000</grad>
+        
+        <ulica>Milovana Milovanovica 1</ulica>
+        
+        <najboljaCena>114 € /noc</najboljaCena>
+        
+        <sobe id="soba1">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>115</cena>
+        </sobe>
+        <sobe id="soba2">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>118</cena>
+        </sobe>
+        <sobe id="soba3">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>143</cena>
+        </sobe>
+        <sobe id="soba4">
+            <brojKreveta>3</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>165</cena>
+        </sobe>
+
+        
+        <brojSoba>71</brojSoba>
+        
+            <uHotelu>
+               Klima uredjaji, Osoblje koje govori vise jezika, Turisticke informacije, Gym, Konferenciska sala
+            </uHotelu>
+            <uSobama>
+                Grejanje, Mini bar
+            </uSobama>
+        
+        <opis>
+           LocationSituated direktno u srcu Beograda , glavne zelezniиke i autobuske stanice su samo nekoliko koraka i Terazije u centru grada je 5 minuta hoda od hotela . Besplatan parking je dostupan u ispred hotela ili u garazi u blizini. Beograd - Aerodrom Nikola Tesla je oko 17 km od hotela
+        </opis>
+     
+        <komentar id="komentar1">
+            <pasus>
+                Radije bih ostao u centru svega . Ovaj hotel je zaista u samom centru . Svetitelj Savva crkva je u pjeske . Kao i tvrdjave , u Mihailova, Lorenco i Kakalamba restorana, hotel Moskva . Sve . Hotel je bio cist , lep i kao luksuzan kao sto smo hteli . Dorucak je bio slab !!
+            </pasus>
+        </komentar>
+        <komentar id="komentar2">
+           <pasus>
+               U njemu se vrlo povoljno nalazi u blizini glavne zeleznicke stanice . Eksterijer hotela je unprepossessing , ali unutrasnjost je sasvim sjajna sa uzvisenim plafona i mnogo Art Deco, klasicnih slika, mermera itd
+Osoblje je bilo vrlo ljubazno . Stigli smo dosta kasno , oko 9 sati , ali su bili zadovoljni da nam sluzi u restoranu na oko 9.30pm .
+Nasa soba je bila neverovatna , pravi dodir luksuza sa svim prikljuccima i dekor u prvobitnom stanju . Postojao je veliki multi - kanal TV koji se moze rotirati da gledaju ili u sobi ili u krevetu .
+Jedina mana za nas je dorucak . Postojala je velika grupa boravak , svaki sto je okupirana , a to je bio pravi olos da se hrane . Dizajn prostora restorana znaci da su uska grla koja ometena prolaz . Kada ste dosli do hrane bilo je prilicno dobar izbor .
+           </pasus>
+
+        </komentar> 
+           
+   <slike id="slike2" >
+            <putanja>kraljica1.jpg</putanja>
+        </slike>    
+   
+        <slike id="slike2" >
+            <putanja>kraljevo2.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>kraljevo3.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>kraljevo4.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>kraljevo5.jpg</putanja>
+        </slike>  
+        <slike id="slike2" >
+            <putanja>kraljevo6.jpg</putanja>
+        </slike>    
+    </hotel>
+    
+    
+    
+     <hotel id="H9">
+        <ime>Villa Mystique Hotel</ime>
+        
+        <zvezdica>3</zvezdica>
+        
+        <ocena>3</ocena>
+        
+        <grad>Beograd, 11000</grad>
+        
+        <ulica>Vajara Doke Jovanovica 16</ulica>
+        
+        <najboljaCena>40 € /noc</najboljaCena>
+        
+        <sobe id="soba1">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>48</cena>
+        </sobe>
+        <sobe id="soba2">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>51</cena>
+        </sobe>
+        <sobe id="soba3">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>118</cena>
+        </sobe>
+        <sobe id="soba4">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>126</cena>
+        </sobe>
+        <sobe id="soba5">
+            <brojKreveta>3</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>164</cena>
+        </sobe>
+
+        
+        <brojSoba>48</brojSoba>
+        
+            <uHotelu>
+               Klima uredjaji, Osoblje koje govori vise jezika, Turisticke informacije, Bazen, Park
+            </uHotelu>
+            <uSobama>
+                Grejanje, Mini bar, Usluga 24/7
+            </uSobama>
+        
+        <opis>
+            Lokacija Nekretnine Sa boravka u Vili Mistikue , bicete u centru grada u Beogradu , nekoliko minuta hoda od Titove mauzolej i blizu Stadion: Partizana . Ovaj 4 -star hotel u neposrednoj blizini stadiona Crvene zvezde i beogradskom Hipodromu
+        </opis>
+     
+        <komentar id="komentar1">
+            <pasus>
+         </pasus>
+        </komentar>
+        <komentar id="komentar2">
+           <pasus>
+           </pasus>
+        </komentar>
+        <komentar id="komentar3">
+            <pasus>
+                Prostorija veoma mala i sam mogao da uradim elektricnu instalaciju bolje . Tepih od zida do zida bio prljav , zidovi su bili tanki tako moglo se cuti hotelsko osoblje van , ne previse biraju iz za Brekfast Ond tako dalje .
+Pozitiv tacka bila da je osoblje je veoma lepo i korisno i podrucje je bila mirna .
+            </pasus>
+        </komentar> 
+        
+     <slike id="slike2" >
+            <putanja>mistiq1.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>mistiq2.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>mistiq3.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>mistiq4.jpg</putanja>
+        </slike>  
+    </hotel>
+    
+    <hotel id="H10">
+        <ime>Hotel Moskva</ime>
+        
+        <zvezdica>4</zvezdica>
+        
+        <ocena>5</ocena>
+        
+        <grad>Beograd, 11000</grad>
+        
+        <ulica>Terazije 20</ulica>
+        
+        <najboljaCena>116 € /noc</najboljaCena>
+        
+        <sobe id="soba1">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>166</cena>
+        </sobe>
+        <sobe id="soba2">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>190</cena>
+        </sobe>
+        <sobe id="soba3">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>211</cena>
+        
+        </sobe>
+        
+        <brojSoba>13</brojSoba>
+        
+            <uHotelu>
+               Klima uredjaji, Osoblje koje govori vise jezika, Turisticke informacije, Bazen, Fitnes Centar, Spa Centar
+            </uHotelu>
+            <uSobama>
+                Grejanje, Mini bar, usluga 24/7
+            </uSobama>
+        
+        <opis>
+             Located in City Center area. Shopping is right next door and the nightlife/restaurants are within walking distance from the hotel.
+        </opis>
+     
+        <komentar id="komentar1">
+            <pasus>
+                najbolji izbor u beogradu . postoje prostorije koje Indira Gandi , Agatha Christie , Al Pacino bili ostaje pre . Lokacija je odlicna mozete hodati ulicom i naći sve sto je potrebno . poznat i delicous patiserrie se nalazi u predvorju , koristan i ljubazno osoblje . uvek broj jedan!
+            </pasus>
+        </komentar>
+        <komentar id="komentar2">
+           <pasus>
+               Čak i po treći put u Beogradu Volim ostati u Moskvi hotel u nje bio središte i vrlo vrlo blizu svemu sa na udaljenosti hoda .. pet minuta iz mog relak butik kafe , tržište , pa čak i viljušku , muzeji su svi sa u 10 minuta hoda .. na kraju zime je bilo malo lepo da bude na nogicama . Ipak , ovaj hotel obezbedi lep spa (U morate probati ) i preporučeni restoran sa prelepim pogledom iz strani .
+           </pasus>
+        </komentar>
+        <komentar id="komentar3">
+            <pasus>
+                pveoma udobne sobe staromodan stil, , imaju čak pušača sobe! Zatvorite centar grada sa prodavnicama i restoranima . Besplatan bežični internet. Čiste velike sobe sa velikim kupatilima . Blizu je tržište grad .
+            </pasus>
+        </komentar> 
+       
+     <slike id="slike2" >
+            <putanja>Moskva1.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Moskva.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Moskva3.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>moskva4.jpg</putanja>
+        </slike>    
+        
+    </hotel>
+    
+    
+    
+<hotel id="H11">
+        <ime>Zlatibor Mona</ime>
+        
+        <zvezdica>4</zvezdica>
+        
+        <ocena>5</ocena>
+        
+        <grad>Zlatibor, 31315</grad>
+        
+        <ulica>Miladina Pecinara 26</ulica>
+        
+        <najboljaCena>145 € /noc</najboljaCena>
+        
+        <sobe id="soba1">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>169</cena>
+        </sobe>
+        <sobe id="soba2">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>198</cena>
+        </sobe>
+        <sobe id="soba3">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>169</cena>
+        </sobe>
+        <sobe id="soba5">
+            <brojKreveta>3</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>304</cena>
+        </sobe>
+        <sobe id="soba6">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>226</cena>
+        </sobe>
+        
+        <brojSoba>120</brojSoba>
+        
+            <uHotelu>
+               Klima uredjaji, Osoblje koje govori vise jezika, Turisticke informacije, Lift, Veseraj, Fitnes Centar
+            </uHotelu>
+            <uSobama>
+                Grejanje, Mini bar, Usluga 24/7
+            </uSobama>
+        
+        <opis>
+           Nalazi se u samom centru Zlatibora , u neposrednoj blizini svih detaljima ovog turistickog centra . Nalazi se 235 km jugozapadno od Beograda , na magistralnom putu Beograd ? Podgorica ? Jadran .
+        </opis>
+     
+        <komentar id="komentar1">
+            <pasus>
+                Ovo je velika Hotel u centru grada sa dva restorana . Sobe su na maloj velicini , ali su adekvatni . Osoblje je izuzetno lepo i efikasno . Dorucak je super ! Nedostatak klimatizacije u standardnim sobama moze biti problematicno tokom leta , ali veceri ne ohlade .
+            </pasus>
+        </komentar>
+        <komentar id="komentar2">
+           <pasus>
+              odlicno mesto za opustanje . nekoliko dana u ovom hotelu ako popunite energiju za dugo vremena i vi cete zeleti da se ponovo vrate .. posebno naglasiti restoran u sklopu hotela , sa odlicnom uslugom i vrlo dobrom hranom . Moja preporuka broj 1 ako posecujete ovu prelepu planinu
+           </pasus>
+        </komentar>
+        <komentar id="komentar3">
+            <pasus>
+                Odlicna lokacija , veliki accomoditation , cist , lepo organizovan , pomalo hladan bazen , hrana Ljubazni , sobe lepe , igraliste za decu sa kafe za roditelje da ih posmatra , besplatan parking ... bi tamo ponovo sigurno , i mogao preporuciti da svima!
+            </pasus>
+        </komentar> 
+       
+     <slike id="slike2" >
+            <putanja>Zlatibor1.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Zlatibor2.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Zlatibor3.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Zlatibor4.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>Zlatibor5.jpg</putanja>
+        </slike> 
+        <slike id="slike2" >
+            <putanja>Zlatibor5.jpg</putanja>
+        </slike>
+    </hotel>
+    
+    
+    <hotel id="H12">
+        <ime>88 Rooms Hotel</ime>
+        
+        <zvezdica>4</zvezdica>
+        
+        <ocena>5</ocena>
+        
+        <grad>Beograd, 11300</grad>
+        
+        <ulica>Takovska 49</ulica>
+        
+        <najboljaCena>118 € /noc</najboljaCena>
+        
+        <sobe id="soba1">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>Da</dorucak>
+            <cena>118</cena>
+        </sobe>
+        <sobe id="soba2">
+            <brojKreveta>1</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>137</cena>
+        </sobe>
+        <sobe id="soba3">
+            <brojKreveta>2</brojKreveta>
+            <dorucak>ne</dorucak>
+            <cena>150</cena>
+        </sobe>
+        <sobe id="soba4">
+            <brojKreveta>3</brojKreveta>
+            <dorucak>da</dorucak>
+            <cena>175</cena>
+        </sobe>
+        
+        <brojSoba>88</brojSoba>
+        
+            <uHotelu>
+               Klima uredjaji, Osoblje koje govori vise jezika, Turisticke informacije, Fitnes Centar, Bazen
+            </uHotelu>
+            <uSobama>
+                Grejanje, Mini bar, Klima, Klavir
+            </uSobama>
+        
+        <opis>
+            Lokacija Nekretnine Kada ostanete na Car Roial apartmana u Novom Sadu, biccete povezani sa kongresnog centra i pogodan za Univerzitet u Novom Sadu i Karadordjevog stadiona. Ovaj 4-star Apartment je u neposrednoj blizini Vojvodine Muzej i Petrovaradin Fortress.Rooms se kao kod kuce u jednom od 13 klimatizovanim prostorijama karakterisu frizidera i mini-barom. Besplatan bezicni pristup internetu omogucava vezu, i satelitski program je dostupan za zabavu. Privatni kupatila imaju duboke potapanjem kade i sminka / brijanje ogledala. Pogodnosti ukljucuju direktan biranja telefone, kao i sefova i desks.Business, Other Amenities Posebne pogodnosti ukljucuju Kolevka, ekpress check-out, i besplatne novine u predvorju. Roundtrip aerodrom transfer je obezbeden za doplatu (dostupno na zahtev), i besplatan parking je dostupan na licu mesta.
+        </opis>
+     
+        <komentar id="komentar1">
+            <pasus>
+                Ovaj hotel je veoma visok u Trip Advisor , a mozete razumeti zasto kao hotel je moderan i funkcionalan , usluga je veoma pazljiva ( neki pojedinci su izuzetni neki su samo adekvatna vec u glavni tamo stvarno stalo ) . Sobe su srednje velicine , ali lijepo i moderno i dorucak je veoma dobro . Postoje neke stvari nacifrano delo jer ti nikad ne dovoljno toilleteries ,  u kupatilu treba malo brine , ali je glavni je ovo odlicno mesto za boravak u Beogradu
+            </pasus>
+        </komentar>
+        <komentar id="komentar2">
+           <pasus>
+               88 Hotel je moderan i ugodno jedinica , na dobroj lokaciji u Beogradu . sta lep pocetak ovde u srpskoj prestonici , sa EKSCELENT obrok u 7. spratu restorana ! Sjajna hrana i strucno osoblje da se brine o potrebama guest's . Marina , ruski menadzer restorana je veoma pazljiv covek i ekstremno ljubazni i profesionalni u svom poslu . Ja zaista preporucujemo ovaj hotel i njegov restoran .
+           </pasus>
+        </komentar>
+        <komentar id="komentar3">
+            <pasus>
+               Lep moderan hotel, na dobroj lokaciji i lako pronaci . Osoblje je bilo dobro , sobe su velike i ciste . Dorucak , ViFi , tus , svi u pravu ... Koliko god se trudim - nista uzeti bodove sa sa . 4 zvezdice u Beogradu - found it ...
+            </pasus>
+        </komentar> 
+       
+     <slike id="slike2" >
+            <putanja>88hotel1.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>88hotel2.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>88hotel3.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>88hotel4.jpg</putanja>
+        </slike>    
+        <slike id="slike2" >
+            <putanja>88hotel5.jpg</putanja>
+        </slike> 
+         <slike id="slike2" >
+            <putanja>88hotel6.jpg</putanja>
+        </slike> 
+    </hotel>
+    
+    
+</catalog>
