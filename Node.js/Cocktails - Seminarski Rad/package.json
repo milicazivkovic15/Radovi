@@ -1,0 +1,18 @@
+{
+  "name": "Milica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Milica Zivkovic",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express-session": "^1.14.2",
+    "multer": "^1.2.1",
+    "sqlite-sync": "^0.3.6"
+  }
+}
