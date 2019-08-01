@@ -26,7 +26,7 @@ public partial class Store : System.Web.UI.Page
                        where p.pet_id == idP
                        select p;
 
-            pet pet = pets.FirstOrDefault();
+            Pet pet = pets.FirstOrDefault();
             pet.owner_id = idO;
             db.SubmitChanges();
         }

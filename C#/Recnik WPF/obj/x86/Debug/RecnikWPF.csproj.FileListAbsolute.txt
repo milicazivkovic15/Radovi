@@ -1,0 +1,16 @@
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\bin\Debug\RecnikWPF.exe
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\bin\Debug\RecnikWPF.pdb
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\RecnikWPF.csprojAssemblyReference.cache
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\MainWindow.baml
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\Proba.g.cs
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\App.g.cs
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\RecnikWPF_MarkupCompile.cache
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\RecnikWPF_MarkupCompile.lref
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\Proba.baml
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\RecnikWPF.g.resources
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\RecnikWPF.Properties.Resources.resources
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\RecnikWPF.csproj.GenerateResource.cache
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\RecnikWPF.csproj.CoreCompileInputs.cache
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\RecnikWPF.exe
+C:\Users\Milica\Desktop\New folder\Radovi\C#\Recnik WPF\obj\x86\Debug\RecnikWPF.pdb

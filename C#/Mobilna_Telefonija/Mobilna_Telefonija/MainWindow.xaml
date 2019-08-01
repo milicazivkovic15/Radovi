@@ -1,0 +1,51 @@
+﻿<Window x:Class="Mobilna_Telefonija.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mobilna_Telefonija"
+        mc:Ignorable="d"
+        Title="Mobilna Telefonija IMI" Height="350" Width="708">
+    <Grid>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="26" Margin="0,10,0,0" VerticalAlignment="Top" Width="690">
+            <MenuItem Header="Nove stavke">
+                <MenuItem Header="Dodaj karticu" Click="MenuItem_Click"/>
+                <MenuItem Header="Dodaj korisnika" Click="MenuItem_Click_1"/>
+                <MenuItem Header="Dodaj telefon" Click="MenuItem_Click_2"/>
+
+            </MenuItem>
+        </Menu>
+        <Label x:Name="label" Content="Korisnik" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Broj telefona" HorizontalAlignment="Left" Margin="159,54,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Tip saobracaja" HorizontalAlignment="Left" Margin="306,54,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Ostvareni saobracaj" HorizontalAlignment="Left" Margin="459,54,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_Korisnik" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="ime" SelectionChanged="comboBox_Korisnik_SelectionChanged"/>
+        <ComboBox x:Name="comboBox_broj" HorizontalAlignment="Left" Margin="159,80,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="broj"/>
+        <ComboBox x:Name="comboBox_saobracaj" HorizontalAlignment="Left" Margin="306,80,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="naziv"/>
+        <TextBox x:Name="novSaobracaj" HorizontalAlignment="Left" Height="22" Margin="459,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
+        <Button x:Name="button" Content="Dodaj" HorizontalAlignment="Left" Margin="612,80,0,0" VerticalAlignment="Top" Width="76" Click="button_Click"/>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="152" Margin="10,116,0,0" VerticalAlignment="Top" Width="588">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding korisnik}" Header="Korisnik" Width="120"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding brTel}" Header="Broj telefona" Width="120"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding saobracaj}" Header="Tip saobracaja" Width="120"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding ostvSaobracaj}" Header="Ostvareni saobracaj" Width="120"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding datum}" Header="Datum" Width="100"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="label4" Content="Korisnik sa najvecim racunom u izabranom danu:" HorizontalAlignment="Left" Height="37" Margin="169,273,0,0" VerticalAlignment="Top" Width="279"/>
+        <Label x:Name="marko" Content="" HorizontalAlignment="Left" Margin="494,273,0,0" VerticalAlignment="Top" Width="130"/>
+        <DatePicker Name="date" HorizontalAlignment="Left" Margin="10,282,0,0" VerticalAlignment="Top" Width="120" SelectedDateChanged="DatePicker_SelectedDateChanged"/>
+        <ListView x:Name="listView1" HorizontalAlignment="Left" Height="94" Margin="603,174,0,0" VerticalAlignment="Top" Width="85">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding korisnik}" Header="Korisnik"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>

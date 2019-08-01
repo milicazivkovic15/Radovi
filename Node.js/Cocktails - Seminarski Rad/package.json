@@ -1,5 +1,5 @@
 {
-  "name": "Milica",
+  "name": "cocktails",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,9 +10,12 @@
   "author": "Milica Zivkovic",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.16.0",
-    "express-session": "^1.14.2",
-    "multer": "^1.2.1",
-    "sqlite-sync": "^0.3.6"
+    "body-parser": "1.16.0",
+    "cookie-parser": "1.4.4",
+    "ejs-locals": "1.0.2",
+    "express": "4.17.1",
+    "express-session": "1.14.2",
+    "multer": "1.2.1",
+    "sqlite-sync": "0.3.6"
   }
 }

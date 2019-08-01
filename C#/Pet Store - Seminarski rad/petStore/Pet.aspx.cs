@@ -7,7 +7,18 @@ using System.Web.UI.WebControls;
 
 public partial class Pet : System.Web.UI.Page
 {
-    DataClassesDataContext db = new DataClassesDataContext();
+    public DataClassesDataContext Db
+    {
+        get
+        {
+            return db;
+        }
+
+        set
+        {
+            db = value;
+        }
+    }
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -25,17 +36,17 @@ public partial class Pet : System.Web.UI.Page
                 error.Text = "Insert values!";
                 return;
             }
-            var a = from pe in db.pets
+            var a = from pe in Db.pets
                     select pe.pet_id;
-            pet p = new pet();
+            Pet p = new Pet();
             p.name = name.Text;
             p.age = int.Parse(age.Text);
             p.description = desc.Text;
             p.owner_id = int.Parse(izborVlasnika.SelectedValue);
             p.type_id = 0;
             p.pet_id = a.Max() + 1;
-            db.pets.InsertOnSubmit(p);
-            db.SubmitChanges();
+            Db.pets.InsertOnSubmit(p);
+            Db.SubmitChanges();
             Response.Redirect(Request.RawUrl);
         }
         else
@@ -51,7 +62,7 @@ public partial class Pet : System.Web.UI.Page
         if (izborLjubimca.Items.Count > 0)
         {
             int id = int.Parse(izborLjubimca.SelectedValue);
-            var a = from p in db.pets
+            var a = from p in Db.pets
                     where p.pet_id == id
                     select new
                     {
@@ -71,12 +82,12 @@ public partial class Pet : System.Web.UI.Page
         if (izborLjubimca.Items.Count > 0)
         {
             int id = int.Parse(izborLjubimca.SelectedValue);
-            var a = from p in db.pets
+            var a = from p in Db.pets
                     where p.pet_id == id
                     select p;
             var pet = a.FirstOrDefault();
             pet.description = description.Text;
-            db.SubmitChanges();
+            Db.SubmitChanges();
             Response.Redirect(Request.RawUrl);
         }
     }
@@ -85,12 +96,12 @@ public partial class Pet : System.Web.UI.Page
         if (izborLjubimca.Items.Count > 0)
         {
             int id = int.Parse(izborLjubimca.SelectedValue);
-            var a = from p in db.pets
+            var a = from p in Db.pets
                     where p.pet_id == id
                     select p;
             var pet = a.FirstOrDefault();
-            db.pets.DeleteOnSubmit(pet);
-            db.SubmitChanges();
+            Db.pets.DeleteOnSubmit(pet);
+            Db.SubmitChanges();
             Response.Redirect(Request.RawUrl);
         }
     }

@@ -11,4 +11,9 @@ public partial class _Default : System.Web.UI.Page
     {
 
     }
+
+    public static void Main()
+    {
+        Console.WriteLine("Enter the degree of the polynomials! ");
+    }
 }

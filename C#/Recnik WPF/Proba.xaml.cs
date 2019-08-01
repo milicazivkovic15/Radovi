@@ -318,54 +318,58 @@ namespace RecnikWPF
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-
-            Studenti s = ls.Find(jmbg.Text);
+            if (ls != null){
+                Studenti s = ls.Find(jmbg.Text);
             
-            if (s != null)
-            {
-                MessageBox.Show(s + " uspesno zaposlen! :) ");
-                Zaposlen z = s;
-                ls.Delete(s);
-                if (lz == null)
-                    lz = new ListaStudenata<Zaposlen>(z);
-                else
-                    lz.Add(z);
-
-
-                string st = "";
-                foreach (var item in lz)
+                if (s != null)
                 {
-                    st += item;
-                }
+                    MessageBox.Show(s + " uspesno zaposlen! :) ");
+                    Zaposlen z = s;
+                    ls.Delete(s);
+                    if (lz == null)
+                        lz = new ListaStudenata<Zaposlen>(z);
+                    else
+                        lz.Add(z);
 
-                MessageBox.Show(st);
+
+                    string st = "";
+                    foreach (var item in lz)
+                    {
+                        st += item;
+                    }
+
+                    MessageBox.Show(st);
+                }
             }
             else {
                 MessageBox.Show("Takav student ne postoji");
             }
+            
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            Studenti s = ls.Find(jmbgS.Text);
-            Zaposlen z = lz.Find(jmbgZ.Text);
-            if (s != null)
-            {
-                if (z != null)
+            if (ls != null){
+                Studenti s = ls.Find(jmbgS.Text);
+                Zaposlen z = lz.Find(jmbgZ.Text);
+                if (s != null)
                 {
-                    int br = s + z;
-                    br_godina.Content = br;
-                    br = z + s;
-                    MessageBox.Show(br + "");
-                }
-                else {
-                    MessageBox.Show("Takav zaposlen ne postoji");
-                }
+                    if (z != null)
+                    {
+                        int br = s + z;
+                        br_godina.Content = br;
+                        br = z + s;
+                        MessageBox.Show(br + "");
+                    }
+                    else {
+                        MessageBox.Show("Takav zaposlen ne postoji");
+                    }
+                 }
             }
             else {
                 MessageBox.Show("Takav student ne postoji");
                 if (z == null)
-                    MessageBox.Show("Takav zaposlen ne postoji");
+                   MessageBox.Show("Takav zaposlen ne postoji");
             }
             
         }
