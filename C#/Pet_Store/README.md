@@ -1,6 +1,6 @@
 # Pet Store
 
-![GUI](https://github.com/milicazivkovic15/Radovi/blob/master/C%23/Pet_Store/Pet_Store/Images/home-poster)
+![Pet_Store](https://github.com/milicazivkovic15/Radovi/blob/master/C%23/Pet_Store/Pet_Store/Images/home-poster.png)
 
 
 Pokretanje
