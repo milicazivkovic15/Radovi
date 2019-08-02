@@ -4,7 +4,7 @@
 
 
 Pokretanje
-1) u Visual Studio otvoriti "File->Open->Project/Solution" i izabrati MilicaZivkovic.sln
+1) u Visual Studio otvoriti "File->Open->Project/Solution" i izabrati Mobilna_Telefonija.sln
 2) u cmd pokrenuti
 	2.1) SQLLocalDB create telefonija
 	2.2) SQLLocalDB start telefonija
