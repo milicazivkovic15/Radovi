@@ -1,5 +1,8 @@
 # Mobilna Telefonija
 
+![GUI](https://github.com/milicazivkovic15/Radovi/blob/master/C%23/Mobilna_Telefonija/GUI.PNG)
+
+
 Pokretanje
 1) u Visual Studio otvoriti "File->Open->Project/Solution" i izabrati MilicaZivkovic.sln
 2) u cmd pokrenuti
