@@ -1,0 +1,14 @@
+﻿  Source.cpp
+c:\users\student\desktop\rad\milica zivkovic\drugikolokvijum\drugikolokvijum\matrix4x4.h(79): warning C4522: 'Matrix4x4': multiple assignment operators specified
+c:\users\student\desktop\rad\milica zivkovic\drugikolokvijum\drugikolokvijum\source.cpp(123): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\users\student\desktop\rad\milica zivkovic\drugikolokvijum\drugikolokvijum\source.cpp(183): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\rad\milica zivkovic\drugikolokvijum\drugikolokvijum\source.cpp(236): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\users\student\desktop\rad\milica zivkovic\drugikolokvijum\drugikolokvijum\source.cpp(247): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\rad\milica zivkovic\drugikolokvijum\drugikolokvijum\source.cpp(293): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\users\student\desktop\rad\milica zivkovic\drugikolokvijum\drugikolokvijum\source.cpp(295): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\users\student\desktop\rad\milica zivkovic\drugikolokvijum\drugikolokvijum\source.cpp(297): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\users\student\desktop\rad\milica zivkovic\drugikolokvijum\drugikolokvijum\source.cpp(309): warning C4244: '=': conversion from 'double' to 'GLsizei', possible loss of data
+c:\users\student\desktop\rad\milica zivkovic\drugikolokvijum\drugikolokvijum\source.cpp(311): warning C4244: '=': conversion from 'double' to 'GLsizei', possible loss of data
+c:\users\student\desktop\rad\milica zivkovic\drugikolokvijum\drugikolokvijum\source.cpp(539): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  DrugiKolokvijum.vcxproj -> C:\Users\student\Desktop\Rad\Milica Zivkovic\DrugiKolokvijum\Debug\DrugiKolokvijum.exe
+  DrugiKolokvijum.vcxproj -> C:\Users\student\Desktop\Rad\Milica Zivkovic\DrugiKolokvijum\Debug\DrugiKolokvijum.pdb (Partial PDB)

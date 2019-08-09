@@ -1,0 +1,22 @@
+﻿  Main.cpp
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\matrix4x4.h(79): warning C4522: 'Matrix4x4': multiple assignment operators specified
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(56): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(66): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(75): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(247): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(292): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(293): warning C4244: 'argument': conversion from 'const double' to 'GLfloat', possible loss of data
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(298): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(299): warning C4244: 'argument': conversion from 'const double' to 'GLfloat', possible loss of data
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(304): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(305): warning C4244: 'argument': conversion from 'const double' to 'GLfloat', possible loss of data
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(354): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(362): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(366): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(370): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(383): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(387): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(391): warning C4018: '<': signed/unsigned mismatch
+c:\users\student\desktop\materijal\popravni kolokvijum\prvikolokvijum\prvikolokvijum\main.cpp(395): warning C4018: '<': signed/unsigned mismatch
+  PrviKolokvijum.vcxproj -> C:\Users\student\Desktop\Materijal\Popravni kolokvijum\PrviKolokvijum\Debug\PrviKolokvijum.exe
+  PrviKolokvijum.vcxproj -> C:\Users\student\Desktop\Materijal\Popravni kolokvijum\PrviKolokvijum\Debug\PrviKolokvijum.pdb (Partial PDB)
