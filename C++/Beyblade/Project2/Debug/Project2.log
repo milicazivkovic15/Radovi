@@ -1,0 +1,23 @@
+﻿  main.cpp
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\matrix4x4.h(79): warning C4522: 'Matrix4x4': multiple assignment operators specified
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(59): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(67): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(101): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(102): warning C4244: 'argument': conversion from 'const double' to 'GLfloat', possible loss of data
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(107): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(108): warning C4244: 'argument': conversion from 'const double' to 'GLfloat', possible loss of data
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(113): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(114): warning C4244: 'argument': conversion from 'const double' to 'GLfloat', possible loss of data
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(130): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(140): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(168): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(174): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(182): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(193): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(201): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(227): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(229): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(270): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(275): warning C4018: '<': signed/unsigned mismatch
+c:\users\milica\desktop\new folder (2)\repos\project2\project2\main.cpp(277): warning C4018: '<': signed/unsigned mismatch
+  Project2.vcxproj -> C:\Users\Milica\Desktop\New folder (2)\repos\Project2\Debug\Project2.exe

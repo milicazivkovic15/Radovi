@@ -1,0 +1,9 @@
+﻿  main.cpp
+c:\users\milica\desktop\new folder (2)\repos\project4\project4\matrix4x4.h(79): warning C4522: 'Matrix4x4': multiple assignment operators specified
+c:\users\milica\desktop\new folder (2)\repos\project4\project4\main.cpp(37): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\milica\desktop\new folder (2)\repos\project4\project4\main.cpp(38): warning C4244: 'argument': conversion from 'const double' to 'GLfloat', possible loss of data
+c:\users\milica\desktop\new folder (2)\repos\project4\project4\main.cpp(43): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\milica\desktop\new folder (2)\repos\project4\project4\main.cpp(44): warning C4244: 'argument': conversion from 'const double' to 'GLfloat', possible loss of data
+c:\users\milica\desktop\new folder (2)\repos\project4\project4\main.cpp(49): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\milica\desktop\new folder (2)\repos\project4\project4\main.cpp(50): warning C4244: 'argument': conversion from 'const double' to 'GLfloat', possible loss of data
+  Project4.vcxproj -> C:\Users\Milica\Desktop\New folder (2)\repos\Project4\x64\Debug\Project4.exe
