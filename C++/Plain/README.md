@@ -1,2 +1,3 @@
-# C++ , OpenGL libary
-Rad u okviru predmeta "Racuranska grafika" na IV godini studija.
+#Plane
+
+![GUI](https://github.com/milicazivkovic15/Radovi/blob/master/C%2B%2B/Plain/Plain.gif)
