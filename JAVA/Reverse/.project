@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>reverse</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/slike/4.png</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/src/reverse/slike/4.png</locationURI>
+		</link>
+		<link>
+			<name>src/slike/6.png</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/src/reverse/slike/6.png</locationURI>
+		</link>
+		<link>
+			<name>src/slike/7.png</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/src/reverse/slike/7.png</locationURI>
+		</link>
+		<link>
+			<name>src/slike/9.jpeg</name>
+			<type>1</type>
+			<locationURI>PROJECT_LOC/src/reverse/slike/9.jpeg</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
