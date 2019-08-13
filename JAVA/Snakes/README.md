@@ -1,2 +1,4 @@
-# JAVA
-Rad u okviru predmeta "Objektno-orijentisano programiranje" na II godini studija. 
+# SNAKES
+
+
+![GUI](https://github.com/milicazivkovic15/Radovi/blob/master/JAVA/Snakes/Snakes.gif)
