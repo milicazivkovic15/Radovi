@@ -1,0 +1,11 @@
+<div class="col-md-12" style="text-align: center; margin: 0 auto;">
+<form novalidate>
+  <div>
+    <b>{{"nazivKulture"|translate}}:</b><br> <input  message-position="top" class="form-control" style="max-width: 50%; margin: 0 auto" type="text" value="" [(ngModel)]="title" id="title" required="required" [ngModelOptions]="{standalone: true}" />
+  </div>
+ <br>
+ <button class="btn btn-success"  type="submit" (click)="saveChanges()"><i class="fa fa-floppy-o" aria-hidden="true"></i>{{"save change"|translate}}</button>
+</form>
+<br>
+<div><i>{{error}}</i></div>
+</div>

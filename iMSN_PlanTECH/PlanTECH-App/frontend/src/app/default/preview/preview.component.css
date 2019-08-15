@@ -1,0 +1,118 @@
+
+
+
+#preview {
+	background: #E8E8E8;
+	padding-top: 10rem;
+	top:-5rem;
+	height: calc(100% + 5rem);
+	position: relative;
+	padding-bottom: 5rem;
+	overflow: hidden;
+}
+.preview-content {
+	position: relative;
+	text-align: center;
+}
+.preview-content .right-side,
+.preview-content .left-side,
+.preview-content .image-part {
+	width: 33.33333%;
+	font-size: 15px;
+	line-height: 27px;
+}
+.preview-content .right-side, .preview-content .left-side {
+	padding: 0 6% 24px;
+	position: absolute;
+	top: 0;
+}
+.preview-content .right-side {
+	right: 0;
+}
+.preview-content .left-side {
+	left: 0;
+}
+.preview-content .image-part {
+	margin: 0 auto;
+	height: 660px;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	background-size: contain;
+}
+.preview-content .item[data-item]::before {
+	background: #38424e;
+	color: #FFFFFF;
+	border-radius: 100%;
+	font-family: roboto;
+	content: attr(data-item);
+	display: inline-block;
+	font-size: 18px;
+	height: 42px;
+	width: 42px;
+	line-height: 42px;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 1.5rem;
+}
+.preview-content h5 {
+	color: #05bca9;
+	font-size: 1.6rem;
+	line-height: 1.875;
+	letter-spacing: .2rem;
+	margin-bottom: .3rem;
+}
+
+/**
+ * responsive:
+ * preview
+ * -
+ */
+
+@media only screen and (max-width:1024px) {
+	.preview-content .right-side, .preview-content .left-side {
+		padding: 0 3% 24px;
+		width: 35%;
+	}
+	.preview-content .image-part {
+		height: 600px;
+		width: 30%;
+	}
+}
+@media only screen and (max-width:768px) {
+	#preview {
+		padding-bottom: 27rem;
+	}
+	.preview-content .right-side, .preview-content .left-side {
+		position: static;
+		width: 100%;
+		max-width: 480px;
+		font-size: 1.6rem;
+		line-height: 3rem;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 0;
+	}
+	.preview-content .image-part {
+		width: 300px;
+		position: absolute;
+		bottom: -630px;
+		left: 50%;
+		margin-left: -150px;
+	}
+}
+@media only screen and (max-width:400px) {
+	#preview {
+		padding-bottom: 21rem;
+	}
+	.preview-content .image-part {
+		width: 230px;
+		bottom: -540px;
+		margin-left: -115px;
+	}
+}
+
+.subdiv
+{
+	margin-left: 30px;
+	margin-right: 30px;
+}

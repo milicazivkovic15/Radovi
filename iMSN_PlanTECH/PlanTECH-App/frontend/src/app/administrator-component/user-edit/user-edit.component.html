@@ -1,0 +1,57 @@
+<div class="menuOffset"></div>
+<md-card class="col-md-10 col-md-offset-1">
+  <md-card-title>{{"Izmena podataka" | translate}}</md-card-title>
+  <md-card-content class="noPaddingCard">
+
+        <span class="col-xs-12 col-sm-5 marg">
+          <div style="width:60%; margin:auto; margin-top:10px;" class="input-group">
+            <input id="searchBox" style="border-top-left-radius: 4px; border-bottom-left-radius:4px; margin-top:7px" class="form-control" placeholder="{{ 'pretraga'| translate }}" (keyup.enter)="showChange()" auto-complete [(ngModel)]="searchResult"
+              [source]="users" [list-formatter]="showList" value-property-name="ID" display-property-name="fullName" />
+            <span class="input-group-btn">
+              <button class="btn btn-default" style="background-color:#eee; margin-top:7px" (click)="showChange()" type="button"><i class="glyphicon glyphicon-search"></i></button>
+            </span>
+          </div>
+        </span>
+        <span class="col-xs-12 col-sm-5 col-sm-offset-2 marg">
+          <div style="width:60%; margin:auto">
+            <h4 style="margin: 0px; text-align: center;  float:left"><i>{{ "sortiraj po"| translate }}:</i></h4>
+            <select #select style="cursor: pointer; float: left" (change)="sort(select.value)" class="form-control">
+              <optgroup  label="{{ 'Opadajuci'| translate }}">
+                <option  value="1">{{ "poImenu"| translate }}</option>
+                <option  value="2">{{ "poKorisnickomImenu"| translate }}</option>
+                <option  value="3">{{ "poMejlu"| translate }}</option>
+              </optgroup>
+              <optgroup   #ffc266; label="{{ 'Rastuci'| translate }}">
+                <option  value="4">{{ "poImenu"| translate }}</option>
+                <option  value="5">{{ "poKorisnickomImenu"| translate }}</option>
+                <option  value="6">{{ "poMejlu"| translate }}</option>
+              </optgroup>
+            </select>
+          </div>
+        </span>
+        <br><br><br>
+      <div class="table-responsive" style="width:100%">
+          <table class="table table-hover">
+            <tr>
+              <th>{{"ime i prezime" | translate}}</th>
+              <th>{{"Username"|translate}}</th>
+              <th>E-mail</th>
+              <th>{{"Phone"|translate}}</th>
+              <th>{{ "datumReg"| translate }}</th>
+              <th></th>
+            </tr>
+            <tr *ngFor="let user of ordered | paginate: { itemsPerPage: 9, currentPage: page }; let i = index">
+              <td class="top-padd">{{user.Fname}} {{user.Lname}}</td>
+              <td class="top-padd">{{user.Username}}</td>
+              <td class="top-padd"><i>{{user.email}}</i></td>
+              <td class="top-padd">{{user.Phone}}</td>
+              <td class="top-padd">{{user.ActivationDate}}</td>
+              <td><button class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="{{'izmeni' | translate }}" (click)="showForm(user.ID)"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+            </tr>
+          </table>  
+        </div> 
+      <span class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin: 3% 0%; width: 100%; text-align: right;">
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+      </span>
+  </md-card-content>
+</md-card>

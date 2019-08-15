@@ -1,0 +1,82 @@
+<div class="menuOffset"></div>
+<md-card class="fakeCardWithSideMenu noCard" id="content">
+    <md-card-title>{{"nova parcela" | translate}}
+        <button id="add" class="btn btn-success" style="float: right;position: relative;  margin-right: 1%;" (click)="save()"><i class="fa fa-plus" aria-hidden="true"></i> {{"dodaj parcelu" | translate }}</button>
+    </md-card-title>
+    <md-card-content class="noPaddingCard zeroContent">
+        <md-card class="fakeCardWithMargin">
+            <app-draw-map #draw id="map"></app-draw-map>
+        </md-card>
+        <md-card class="fakeCard" id="fakeCard">
+            <i>*{{ "ime parcele" | translate }}:</i>
+            <div class="input-group" style="width: 100%; ">
+                <div style="max-width: 60%;"><input type="text" class="form-control" [(ngModel)]="Title" id="title" message-position="top"></div>
+                <br>
+                <br>
+                <span><i>*{{"Katastarski broj parcele" | translate}}:</i></span>
+                <br>
+                <div style="max-width: 60%;"><input type="text" class="form-control" [(ngModel)]="parcelNumber"></div>
+
+            </div>
+            {{message}}
+            <br>
+            <span *ngIf="other">
+                <i>* {{"vlasnik" | translate}}:</i>
+                <select id="own" [(ngModel)]="selected" #owner (change)="change(owner.value)" class="form-control" style="width:50%">
+                    <option *ngFor="let user of users" value={{user.ID}}>{{user.Name}}</option>
+                </select>
+            </span>
+            <div style="width: 100%">
+                <div *ngIf="crops.length" class="table-responsive" style="width: 100%">
+                    <table class="table table-hover" *ngIf="sensors!=null">
+                        <span class="table table-hover">
+                    <thead><tr style="width:100%">
+                        <th>{{"zasadjene kulture" | translate}}</th>
+                        <th>&nbsp;</th>
+                    </tr></thead>
+                    <tr *ngFor="let crop of crops; let i = index">
+                        <td class="top-padd specialHeight">{{crop.Name}}</td>
+                        <td ><button class="btn btn-danger" (click)="deleteCrop(crop.ID)"><i class="fa fa-times fa-lg"></i></button>
+                   </td>
+                    </tr>
+                </span>
+                    </table>
+                </div>
+                <span *ngIf="otherCrops.length">
+                    <div class="input-group" style="width: 100%; ">  
+                        <br>
+                        <i>*{{"Dodajte kulture koje se nalazi na parceli" | translate}}:</i>        
+                    <select id="cul" #cropSel class="form-control" style="max-width: 60%;">
+                        <optgroup *ngFor="let crop of otherCrops" label={{crop.Title}}>
+                            <option *ngFor="let sub of crop.subcrops" value={{sub.ID}}>{{sub.title}}</option>
+                        </optgroup>        
+                    </select>
+                    <button class="btn btn-success" style="float: left; margin-left:5px" (click)="add(cropSel.value)"><i class="fa fa-plus" aria-hidden="true"></i> {{"dodaj" | translate}}</button>
+                    </div>
+                </span>
+            </div>
+        </md-card>
+        <md-card class="fakeCard" id="sens">
+            <div class="table-responsive" style="width: 100%">
+                <table class="table table-hover" *ngIf="sensors!=null">
+                    <span class="table table-hover" *ngFor="let type of sensors; let j = index;">
+                    <thead><tr style="width:100%">
+                        <th>{{type.ime | translate}}</th>
+                        <th>&nbsp;</th>
+                    </tr></thead>
+                    <tr *ngFor="let sensor of type.all; let i = index">
+                        <td >{{"senzor za" | translate}} {{sensor.ime | translate}} {{i+1}}</td>
+                        <td ><span style="margin-left:-20px" class="material-switch ">
+                                    <input (click)="check(sensor)" class="cursor" id="2someSwitchOptionSuccess2{{j}}{{i}}" name="someSwitchOption001" [(ngModel)]="sensor.used"  type="checkbox"/>
+                                    <label for="2someSwitchOptionSuccess2{{j}}{{i}}" class="label-success"></label>
+                                    </span></td>
+                    </tr>
+                    </span>
+                </table>
+            </div>
+            <br> {{"ip adresa senzora" | translate}}:<br>
+            <div style="width: 60%; display:inline-block;"><input type="text" [(ngModel)]="ip" class="form-control"></div><button (click)="getByIp()" class="btn btn-success"
+                style="margin-left: 5px"><i class="fa fa-plus" aria-hidden="true"></i> {{"dodaj" | translate}}</button>
+        </md-card>
+    </md-card-content>
+</md-card>

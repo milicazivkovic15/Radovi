@@ -1,0 +1,9 @@
+ <div class="col-md-12" style="text-align: center">
+
+ <form #formCtrl1="ngForm"  novalidate   (ngSubmit)="saveChanges()">
+  
+  <br><span>{{ "EnterUsername" | translate }}</span>
+  <br><input style="max-width: 50%; margin: 0 auto;" id="user"  class="form-control" type="text" value="" [(ngModel)]="username" required="required"  [ngModelOptions]="{standalone: true}" message-position="top"/>
+ <br><button  type="submit" class="btn btn-success" ><i class="fa fa-send-o fa-lg"></i> {{ "Send" | translate }}</button>
+ </form>
+ </div>

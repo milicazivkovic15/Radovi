@@ -1,0 +1,92 @@
+<app-default-menu></app-default-menu>
+
+<!--<div class="images">
+    <div class="carousel-inner">
+    <div class="carousel-caption">
+        <h1 >OVDE MOZE NEKI TEXT</h1>
+    </div>
+    <img alt="" class="img-responsive" [src]="logoPath">
+    </div>
+
+</div>-->
+
+<section id="intro" style="background-color: #e8e8e8; z-index:600">
+
+  <div class="intro-content">
+
+
+    <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+      <!-- Overlay -->
+      <div class="overlay"></div>
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bs-carousel" data-slide-to="1"></li>
+        <li data-target="#bs-carousel" data-slide-to="2"></li>
+        <li data-target="#bs-carousel" data-slide-to="4"></li>
+        <li data-target="#bs-carousel" data-slide-to="5"></li>
+        <li data-target="#bs-carousel" data-slide-to="6"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item slides active">
+          <div class="slide-1"></div>
+          <div class="hero">
+
+            <h1>{{'slider1' | translate}}</h1>
+            <h3>{{'subSlider1' | translate}}</h3>
+          </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-2"></div>
+          <div class="hero">
+
+            <h1>{{'slider2' | translate}}</h1>
+            <h3>{{'subSlider2' | translate}}</h3>
+          </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-4"></div>
+          <div class="hero">
+
+            <h1>{{'slider3' | translate}}</h1>
+            <h3>{{'subSlider3' | translate}}</h3>
+          </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-5"></div>
+          <div class="hero">
+
+            <h1>{{'slider1' | translate}}</h1>
+            <h3>{{'subSlider1' | translate}}</h3>
+          </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-6"></div>
+          <div class="hero">
+
+            <h1>{{'slider2' | translate}}</h1>
+            <h3>{{'subSlider2' | translate}}</h3>
+          </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-7"></div>
+          <div class="hero">
+
+            <h1>{{'slider3' | translate}}</h1>
+            <h3>{{'subSlider3' | translate}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-preview style="position:relative; top:5rem"></app-preview>
+<app-login #login></app-login>
+<app-price #price></app-price>
+<div id="go-top" style="display: none;">
+  <a class="smoothscroll" title="Back to Top" href="/PlanTECH#top"><i class="glyphicon glyphicon-chevron-up"></i></a>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,28 @@
+  <md-card-title id="permisije" style="margin-bottom:30px;">{{"Izmena podata zaposlenih" | translate}}</md-card-title>
+    <md-card-content>
+
+<span style="display:block; clear:both; width:100%; text-align: center" *ngIf="msg"><h2>{{msg}}</h2></span>
+<div *ngIf="!msg" class="col-md-8 col-xs-12 input-group" style="margin: 0;float: left">
+  <input type="text" style=" height: 32px; margin-left:0px; border-radius:4px" class="form-control" name="workerText" #search (keyup)="filter()" [(ngModel)]="filterValue" placeholder="{{'unesiUseriEmail' | translate}}"
+    id="workerText" />
+</div><br><br>
+  <div class="table-responsive" style="max-width: 100%; overflow-x:auto" *ngIf="!msg">
+    <table class="table table-hover">
+      <th style="width: 25%">{{"FirstName" | translate}}</th><th style="width: 25%">{{"Username" | translate}}</th><th style="width: 40%">E-mail</th>
+      <tr class="myHover" *ngFor="let user of filtered| paginate: { itemsPerPage: 10, currentPage: page }">
+        <td  style="width: 25%">{{user.Fname}} {{user.Lname}}</td>
+        <td  style="width: 25%">{{user.Username}}</td>
+        <td  style="width: 40%"><i>{{user.email}}</i></td>
+        
+        <td style="width: 5%"><button class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="{{'izmeni' | translate }}" (click)="show(user.accID)"><i class="fa fa-pencil" aria-hidden="true"></i></button></td> 
+              <!--{{"izmeni dozvole" | translate}} -->
+        <td style="width: 5%"><button class="btn btn-danger" (click)="deleteAsk(user.accID)" data-toggle="tooltip" data-placement="bottom" title="{{'Obrisi'|translate}}"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+            <!--{{"Obrisi radnika" | translate}}-->
+      </tr>
+    </table>
+  </div>
+
+<span  *ngIf="!msg" style="float: right; font-size: 12px">
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</span>
+    </md-card-content>

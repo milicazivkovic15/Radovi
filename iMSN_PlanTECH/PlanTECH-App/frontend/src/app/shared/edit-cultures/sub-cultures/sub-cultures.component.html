@@ -1,0 +1,94 @@
+
+
+
+
+<md-card >
+  <md-card-title >{{"nazivKulture"|translate}}: {{title}}
+  <span style="float: right" class="col-xs-12 col-sm-5">
+      <div style="width:100%;" class="input-group">
+          <input id="searchBox" type="text" [(ngModel)]="filterValue" class="form-control" (keyup)="filter()" style="border-radius: 4px" placeholder="{{'pretraga' | translate}}">
+     </div>
+      <br>
+    </span>
+    </md-card-title>
+  <br>
+  <md-card-content style="max-height:55vh; overflow:auto">
+  <div class="table-responsive" style="width:100%" *ngIf="agr==true">
+    <table class="table table-hover" >
+      <tr>
+        <th>#</th>
+        <th style="text-align: left">{{"nOfSubculture"|translate}}</th>
+        <!--<th></th>-->
+        <th ></th>
+       
+      </tr>
+      <tr  *ngFor="let s of subFiltered ; let i = index">
+        <th >{{i+1}}</th>
+        <td style="text-align: left;width: 60%" class="top-padd" *ngIf="!s.edit"> {{s.Title}} </td>
+        <td style="text-align: left;width: 60%" class="top-padd" *ngIf="s.edit"><input class="form-control" id="newSubCrop"  message-position="top" type="text" value="" [(ngModel)]="s.Title"  required="required"  /></td>
+        <!--<td style="text-align: right;width: 15%" *ngIf="!s.edit">
+    <button  class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="{{'izmeni' | translate }}" style="float: left ;margin-left: 15px;"  (click)="edit(s.ID)" ><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+        <td style="text-align: right;width: 15%" *ngIf="s.edit">
+           <button class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="{{'snimi' | translate }}" style="float: left ;margin-left: 15px;"  (click)="updateSubCrop(s.ID,s.Title)" ><i class="fa fa-save" aria-hidden="true"></i></button>
+          </td>-->
+        <td style="text-align: right;width: 15%" >
+          <button class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="{{'Obrisi'|translate}}" style=" float: left;margin-left: 15px;"  (click)="deleteSubCrop(s.ID)" ><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        </td>
+      </tr>
+    </table>
+  </div>
+   <div class="table-responsive" style="width:100%" *ngIf="agr!=true">
+    <table class="table table-hover" >
+      <tr>
+        <th style="text-align: left">{{"nOfSubculture"|translate}}</th>
+        <th></th>
+        <th ></th>
+       
+      </tr>
+      <tr  *ngFor=" let c of userCropsFiltered ; let i = index">
+        
+        <td style="text-align: left;width: 60%" class="top-padd" *ngIf="!c.edit"> {{c.Title}} </td>
+        <td style="text-align: left;width: 60%" class="top-padd" *ngIf="c.edit"><input class="form-control" id="newSubCrop"  message-position="top" type="text" value="" [(ngModel)]="c.Title"  required="required"  /></td>
+        <td style="text-align: right;width: 15%" *ngIf="!c.edit">
+    <button  class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="{{'izmeni' | translate }}" style="float: left ;margin-left: 15px;"  (click)="edit(c.ID)" ><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+        <td style="text-align: right;width: 15%" *ngIf="c.edit">
+           <button class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="{{'snimi' | translate }}" style="float: left ;margin-left: 15px;"  (click)="updateSubCrop(c.ID,c.Title)" ><i class="fa fa-save" aria-hidden="true"></i></button>
+          </td>
+        <td style="text-align: right;width: 15%" >
+          <button class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="{{'Obrisi'|translate}}" style=" float: left;margin-left: 15px;"  (click)="deleteSubCrop(c.ID)" ><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        </td>
+      </tr>
+      <tr  *ngFor=" let c of  freeUsersCropsFiltered ; let i = index">
+       
+        <td style="text-align: left;width: 60%" class="top-padd" *ngIf="!c.edit"> {{c.Title}} </td>
+        <td style="text-align: left;width: 60%" class="top-padd" *ngIf="c.edit"><input class="form-control" id="newSubCrop"  message-position="top" type="text" value="" [(ngModel)]="c.Title"  required="required"  /></td>
+        <td style="text-align: right;width: 15%" *ngIf="!c.edit">
+    <button  class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="{{'izmeni' | translate }}" style="float: left ;margin-left: 15px;"  (click)="edit(c.ID)" ><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+        <td style="text-align: right;width: 15%" *ngIf="c.edit">
+           <button class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="{{'snimi' | translate }}" style="float: left ;margin-left: 15px;"  (click)="updateSubCrop(c.ID,c.Title)" ><i class="fa fa-save" aria-hidden="true"></i></button>
+          </td>
+        <td style="text-align: right;width: 15%" >
+          <button class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="{{'Obrisi'|translate}}" style=" float: left;margin-left: 15px;"  (click)="deleteSubCrop(c.ID)" ><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        </td>
+      </tr>
+       <tr  *ngFor=" let c of  ownerCropsFiltered ; let i = index">
+       
+        <td style="text-align: left;width: 60%" class="top-padd" > {{c.Title}} </td>
+        <td></td>
+        <td></td>
+      </tr>
+       
+       <tr  *ngFor=" let c of  subCropsFiltered ; let i = index">
+       
+        <td style="text-align: left;width: 60%" class="top-padd" > {{c.Title}} </td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <!--<span  class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin: 3% 0%; width: 100%; text-align: right;">
+      <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </span>-->
+
+  </md-card-content>
+</md-card>

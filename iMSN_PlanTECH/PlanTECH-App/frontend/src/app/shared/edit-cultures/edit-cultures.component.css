@@ -1,0 +1,24 @@
+.test + .tooltip > .tooltip-inner {
+      background-color: #e8e8e8; 
+      color: #FFFFFF; 
+      border: 1px solid #e8e8e8; 
+      padding: 15px;
+      font-size: 20px;
+  }
+
+@media screen and (max-width:768px)
+{
+  .full{
+    width:100% !important;
+    margin-bottom: 10px !important;
+  }
+
+  .fullCard{
+    margin-bottom:10px !important;
+  }
+}
+
+.widthTd{
+  width:30% !important;
+  text-align: center !important;
+}

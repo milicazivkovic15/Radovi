@@ -1,0 +1,84 @@
+<div class="menuOffset"></div>
+
+<div class="content-wrapper" style="padding:0 20px">
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12 col-md-5" style="padding-right: 0px">
+      <md-card style="margin: 0px; margin-bottom:8px">
+        <md-card-title>{{"Obaveštenja" | translate}}</md-card-title>
+        <md-card-content>
+
+          <div class="col-md-12">
+            <div class="box box-solid">
+              <div class="box-header with-border"><br><br>
+                <h4 class="box-title" style="text-align: center;margin:auto">*{{"Prevucite stavku na kalendar" | translate}}</h4>
+              </div>
+              <div class="box-body">
+                <!-- the events -->
+                <div id='external-events' class='col-xs-12' style="max-height: 300px; overflow-y: auto; overflow-x: hidden">
+                  <div class='external-event bg-green' *ngFor="let n of notifications" id="el{{n.ID}}" [ngClass]="{'bg-green':n.Priority==3,'bg-yellow':n.Priority==2,'bg-red':n.Priority==1}">{{n.Title}}
+                    <button id="id1" style="background: transparent; border:none; float:right; z-index:500; position: relative; left:-10px"
+                      (click)="deleteNotification(n.ID)"><i _ngcontent-rge-61="" aria-hidden="true" class="fa fa-times"></i></button><br>
+                      <a class="parcelAnchor"
+                        id="id2" *ngIf="n.ParcelID!=null" (click)="lookPlantage(n.ParcelID)">- {{"Pregled plantaze" | translate}} -</a>
+                  </div>
+                </div>
+                <label for='drop-remove'>
+                      <span style="float:left; width:25px;"><input style="width:15px; height:15px; position: relative; top:35px" type='checkbox' id='drop-remove' /></span>
+                      <span style="float:left; line-height: 17px !important; margin-left:25px;">{{"Obelezite u koliko zelite da stavka iz liste nakon prevlacenja na kalendar nestane" | translate}}</span>
+                    </label>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /. box -->
+            <div class="box box-solid">
+
+              <div style="clear:both" class="box-body">
+                <!-- /btn-group -->
+                <div class="input-group">
+                  <span class="input-group-addon">{{"Dodajte podsetnik" | translate}}</span>
+                  <input id="new-event" type="text" class="form-control" message-position="top" placeholder="Unesite svoj potsetnik">
+                  <div class="input-group-btn" style="position: relative" id="color-chooser">
+
+                    <button id="add-new-event2" type="button" class="btn btn-primary btn-flat" style="background-color:#ff5c33;border-color:#ff5c33;height:100%;width:100%;position:absolute;z-index: 500; padding: 1px" ><i class="uk uk-icon-plus"></i></button>
+                    <button id="add-new-event3" type="button" class="btn btn-primary btn-flat" style="background-color:#ffd11a;border-color:#ffd11a;height:100%;width:100%;position:absolute;z-index: 500; padding: 1px"><i class="uk uk-icon-plus"></i></button>
+
+                    <button id="add-new-event" type="button" class="btn btn-primary btn-flat" style="background-color: #66cc66; border-color:#66cc66;z-index: 500;"><i class="uk uk-icon-plus"></i></button>
+
+                  </div>
+                  <!-- /btn-group -->
+                </div>
+                <!-- /input-group -->
+              </div>
+            </div>
+          </div><br>
+        </md-card-content>
+      </md-card>
+    </div>
+      <!-- /.col -->
+      <div class="col-xs-12 col-md-7">
+      <md-card style="margin: 0px; margin-bottom:8px" >
+        <md-card-title>{{"kalendar"| translate}}</md-card-title>
+        <md-card-content>
+
+          <div class="col-md-12">
+            <div class="box box-primary">
+              <div class="box-body no-padding">
+                <!-- THE CALENDAR -->
+                <div id="calendar"></div>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /. box -->
+          </div>
+        </md-card-content>
+      </md-card>
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

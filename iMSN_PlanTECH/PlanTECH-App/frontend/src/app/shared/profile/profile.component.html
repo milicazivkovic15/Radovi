@@ -1,0 +1,140 @@
+<div class="menuOffset"></div>
+<md-card id="prof" [ngClass]="{'col-xs-12 col-md-10 col-md-offset-1':owner, 'custom col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4':!owner && !showButton,  'custom col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3':!owner && showButton}">
+  <md-card-title>{{"Profil"| translate}}
+    <span style="float: right;">
+        <button type="submit" id="tut" class="btn btn-primary" style="margin-left: 25px;" (click)="showCorny()">{{"Ponovi tutorial" | translate}}</button>
+        <button *ngIf="showButton" type="submit" id="typeChange" class="btn btn-primary" style="margin-left: 5px" (click)="showChangeType()">{{"promena paketa" | translate}}</button>
+    </span>
+  </md-card-title>
+  <md-card-content class="noPaddingCard">
+    <md-card class="col-xs-12 noCard" [ngClass]="{'fakeCardWithMargin':owner}">
+      <ul class="nav nav-tabs">
+        <li class="active li"><a id="notActive" class="not" (click)="flip(false)">{{"Osnovni podaci korisnika" | translate}}</a></li>
+        <li class="li"><a class="not" (click)="flip(true)">{{ "change password" | translate }}</a></li>
+      </ul>
+      <div *ngIf="changePass==false">
+        <div *ngIf="flag==true" style="text-align: left; padding-left:0; padding-right:0;">
+        <div style="width:55%; display:inline-block">
+          <br><span >{{ "FirstName" | translate }}:</span> <label id="fname1">  {{user.fname}}</label>
+          <br><span>{{ "LastName" | translate }}: </span><label id="lname1">  {{user.lname}}</label>
+          <br><span>{{ "Username" | translate }}: </span><label id="username1">  {{user.username}}</label>
+          <br><span>E-mail:</span> <label id="Email1">  {{user.email}}</label>
+          <br><span>{{ "Phone" | translate }}:</span> <label id="phone1" name="phone"> {{user.phone}}</label>
+          <br><span style="float:left">{{"Jezik" | translate}}:</span> <span id="lang">
+        <span *ngIf="active=='sr'">
+          <img src="{{pathPart}}/images/lang/sr.png" class="hand lang sr activeL" alt="sr" style="height: 31px !important; width: 41px !important;" (click)="changeLang(0)">  
+          <img src="{{pathPart}}/images/lang/en.png" class="hand lang en" alt="en" style="height: 30px !important; width: 41px !important;" (click)="changeLang(1)">  
+        </span>
+        <span *ngIf="active=='en'">
+          <img src="{{pathPart}}/images/lang/en.png" class="hand lang en activeL" alt="en" style="height: 31px !important; width: 41px !important;" (click)="changeLang(1)">  
+          <img src="{{pathPart}}/images/lang/sr.png" class="hand lang sr" alt="sr" style="height: 30px !important; width: 41px !important;" (click)="changeLang(0)">  
+        </span>
+  </span>
+          <br>
+        </div>        
+          <img *ngIf="owner || userFlag" style="width:44%; display: inline-block; position:relative; top:-30px" [ngClass]="{'imgUser':userFlag, 'imgOwner':owner}" src={{imgPath}}>             
+          <div style="position:relative; top:30px; width:100%;" [ngClass]="{'move':owner, 'moveUser':userFlag}">
+            <button class="btn btn-primary" style="top:-10px; position:relative" (click)="change()"><i class="glyphicon glyphicon-pencil"></i> {{ "changeData" | translate}} </button>
+          </div>
+        </div>
+        <div *ngIf="flag==false" id="change"><br>
+          <form #formCtrl1="ngForm" novalidate (ngSubmit)="saveChanges()">
+            <span>{{ "FirstName" | translate}}</span><input style=" margin: 0 auto;" class="form-control" type="text" value=""
+              [(ngModel)]="user.fname" id="fname" required="required" [ngModelOptions]="{standalone: true}" pattern-type="alpha"
+              message-sr="Ime je jedna reč i treba da sadrži samo slova" message-en="First name is one word, and should contain only letters"
+              message-position="top" />
+
+            <span>{{ "LastName" | translate}}</span><input style=" margin: 0 auto;" class="form-control" type="text" value=""
+              [(ngModel)]="user.lname" id="lname" required="required" [ngModelOptions]="{standalone: true}" pattern-type="alpha"
+              message-sr="Prezime je jedna reč i treba da sadrži samo slova" message-en="Last name is one word, and should contain only letters"
+              message-position="top" />
+
+            <span>{{ "Username" | translate}}*</span><input style=" margin: 0 auto;" class="form-control" type="text" value=""
+              [(ngModel)]="user.username" id="username" required="required" [ngModelOptions]="{standalone: true}" pattern-type="username"
+              message-sr="Korisničko ime moze da sadrži samo slova i brojeve. Broj karaktera od 8 do 16" message-en="Username can contain only letters and numbers. Length should be between 8 and 16 characters"
+              message-position="top" />
+            <span>E-mail*</span><input type="text" style=" margin: 0 auto;" class="form-control" value="" [(ngModel)]="user.email"
+              id="Email" required="required" [ngModelOptions]="{standalone: true}" pattern-type="email" message-sr="E-mail adresa nije u ispravnom obliku!"
+              message-en="E-mail address is not in the correct format!" message-position="top" />
+            <span>{{ "Phone" | translate}}</span><input type="text" style=" margin: 0 auto;" class="form-control" value=""
+              [(ngModel)]="user.phone" id="phone" name="phone" pattern-type="phone" message-sr="Broj telefona nije u ispravnom obliku!"
+              message-en="Phone number is not in the correct format!" message-position="top" />
+            <span>
+              <br>
+              <button class="btn btn-success" type="submit" ><i class="uk-icon-save"></i> {{ "save change" | translate}}</button>
+              <button class="btn btn-danger" type="button" (click)="fail()"><i class="uk-icon-trash-o"></i> {{ "Clear changes" | translate}}</button>
+            </span>
+          </form>
+        </div>
+
+             <div id="works" *ngIf="works.length!=0">
+        <div class="table-responsive" style="width: 100%; padding: 0 20px;">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>{{"Vlasnik gazdinstva" | translate}}</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tr *ngFor="let w of works; let i = index">
+              <td class="top-padd">{{i+1}}</td>
+              <td class="top-padd">{{w.Name}}</td>
+              <td><button class="btn btn-danger" (click)="quit(w.OwnerID)"><i class="fa fa-times fa-lg"></i> {{"Ostavka" | translate}}</button></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      </div>
+      <div *ngIf="changePass==true" id="pass">
+        <br>
+        <form #formCtrl1="ngForm" novalidate (ngSubmit)="savePass()">
+          <span>{{ "Current" | translate }}:</span>
+          <div class="input-group">
+            <input type="{{type}}" class="form-control" aria-describedby="basic-addon1" name="siff" id="curr" value="" [(ngModel)]="password"
+              required="required" pattern-type="pass" message-sr="Lozinka mora da sadrži najmanje jedno malo i jedno veliko slovo, kao i najmanje jedan broj i jedan specijalni karakter (-!?_*@). Broj karaktera od 8 do 16" message-en="Password must contain at least one lower and one upper letter, and also at least one digit and special character (-!?_*@). Length should be between 8 and 16 characters"
+              message-position="top" />
+            <div class="input-group-addon" id="basic-addon1" style="min-width: 39px; padding: 0px">
+              <button class="hideButton" type="button" style="width: 100%" (mousedown)="mousedown(0)" (mouseup)="mouseup(0)" (mouseleave)="mouseup(0)"> <i class="glyphicon glyphicon-eye-open"></i></button>
+            </div>
+          </div>
+          <span>{{ "NewPass" | translate}}:</span>
+          <div class="input-group">
+            <input type="{{type1}}" class="form-control" aria-describedby="basic-addon1" name="siff" id="siff" value="" [(ngModel)]="newPass"
+              required="required" pattern-type="pass" message-sr="Lozinka mora da sadrži najmanje jedno malo i jedno veliko slovo, kao i najmanje jedan broj i jedan specijalni karakter (-!?_*@). Broj karaktera od 8 do 16" message-en="Password must contain at least one lower and one upper letter, and also at least one digit and special character (-!?_*@). Length should be between 8 and 16 characters"
+              message-position="top" />
+            <div class="input-group-addon" id="basic-addon1" style="min-width: 39px; padding: 0px">
+              <button class="hideButton" type="button" style="width: 100%" (mousedown)="mousedown(1)" (mouseup)="mouseup(1)" (mouseleave)="mouseup(1)"> <i class="glyphicon glyphicon-eye-open"></i></button>
+            </div>
+          </div>
+          <span>{{ "aPassword" | translate}}:</span>
+          <div class="input-group">
+            <input type="{{type2}}" class="form-control" aria-describedby="basic-addon1" name="siff" id="siff2" value="" [(ngModel)]="pass2"
+              required="required" message-position="top" />
+            <div class="input-group-addon" id="basic-addon1" style="min-width: 39px; padding: 0px">
+              <button class="hideButton" type="button" style="width: 100%" (mousedown)="mousedown(2)" (mouseup)="mouseup(2)" (mouseleave)="mouseup(2)"> <i class="glyphicon glyphicon-eye-open"></i></button>
+            </div>
+          </div>
+          <br>
+          <button class="btn btn-success"><i class="uk-icon-save"></i> {{ "change password" | translate}}</button>
+        </form>       
+      </div>
+   <plotly-chart *ngIf="owner" id="chart" #chart style="width:100%"></plotly-chart>  
+      
+    </md-card>
+    <md-card *ngIf="owner && show" class="fakeCard col-xs-12 noCard" id="pak">
+      <div class="circle">
+        <canvas baseChart [data]="workersDoughnutChartData" [labels]="workersDoughnutChartLabels" [options]="options" [colors]="colors"
+          [chartType]="chartType"></canvas>
+      </div>
+      <div class="circle">
+        <canvas baseChart [data]="parcelsDoughnutChartData" [labels]="parcelsDoughnutChartLabels" [options]="options" [colors]="colors"
+          [chartType]="chartType"></canvas>
+      </div>
+      <div class="circle">
+        <canvas baseChart [data]="sensorsDoughnutChartData" [labels]="sensorsDoughnutChartLabels" [options]="options" [colors]="colors"
+          [chartType]="chartType"></canvas>
+      </div>
+    </md-card>
+  </md-card-content>
+</md-card>

@@ -1,0 +1,47 @@
+#styles {
+    background: white;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+}
+
+.current {
+    background-color: #05bca9 !important;
+}
+
+.disabled {
+    color: black !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .myContainer {
+        margin-top: 60px !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .myContainer {
+        margin-top: 0px !important;
+    }
+}
+
+.default {
+    background-color: #e8e8e8 !important;
+}
+
+.agro {
+    background-image: url('/src/images/agronomic.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.admin {
+    background-image: url('/src/images/admin.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.parcels {
+    background-image: url('/src/images/agronomic.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}

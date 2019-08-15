@@ -1,0 +1,43 @@
+<div *ngIf="users.length>0" style="padding:0; margin:0">
+<button style="float:right; margin-right:15px" class="btn btn-success"  (click)="save()" ><i class="fa fa-save"></i> {{"save change" | translate}}</button>
+
+<div class="table-responsive" style="width: 100%; height: 100%;" *ngIf="!msg">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <td></td>
+      <td>{{"pregled parcele" | translate}}</td>
+      <td>{{"izmena podataka parcele"|translate}}</td>
+      <td>{{"izmena pravila" | translate}}</td>
+    </tr>
+  </thead>
+  <thead>
+    <tr>
+      <td class="top-padd">{{ "ime parcele" | translate}}</td>
+      <td style="text-align: center"><button md-button (click)="change(1)">{{viewMsg}}</button></td>
+      <td style="text-align: center"><button md-button (click)="change(2)">{{editMsg}}</button></td>
+      <td style="text-align: center"><button md-button (click)="change(3)">{{rulesMsg}}</button></td>
+    </tr>
+  </thead>
+  <tbody>
+ 
+  <tr *ngFor="let user of users; let i = index">
+    <td>{{user.Title}}</td>
+    <td style="text-align: center"><span style="    margin-left: -40px;" class="material-switch ">
+  <input  (click)="check(1)" class="cursor" id="2someSwitchOptionSuccess1{{i}}" name="someSwitchOption001" [(ngModel)]="user.View"  type="checkbox"/>
+  <label for="2someSwitchOptionSuccess1{{i}}" class="label-success"></label>
+</span></td>
+<td style="text-align: center"><span  style="margin-left: -40px;" class="material-switch ">
+  <input  (click)="check(2)" class="cursor" id="2someSwitchOptionSuccess2{{i}}" name="someSwitchOption001" [(ngModel)]="user.Edit"  type="checkbox"/>
+  <label for="2someSwitchOptionSuccess2{{i}}" class="label-success"></label>
+</span></td>
+<td style="text-align: center"><span style="margin-left: -40px;" class="material-switch ">
+  <input (click)="check(3)" class="cursor" id="2someSwitchOptionSuccess3{{i}}" name="someSwitchOption001" [(ngModel)]="user.Rules"  type="checkbox"/>
+  <label for="2someSwitchOptionSuccess3{{i}}" class="label-success"></label>
+</span></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<h2 style="width: 100%; text-align:center;" *ngIf="users.length==0">{{"nemaParcela" | translate}}</h2>

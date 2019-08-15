@@ -1,0 +1,10 @@
+<div class="menuOffset"></div>
+<md-card class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12" id="supp">
+  <md-card-title>{{ "Postavite pitanje" | translate }}</md-card-title>
+  <md-card-content class="noPaddingCard">
+      <b><i>{{"tvoje pitanje" | translate}}:</i></b>
+      <textarea [(ngModel)]="question" id="ques" message-position="top" style="resize: none; overflow-y:auto; overflow-x: none !important; margin:0;" class="form-control" rows="5" [ngModelOptions]="{standalone: true}"></textarea>
+      <br>
+      <button class="btn btn-primary" type="submit" (click)="addTicket()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> {{ "Send" | translate }}</button>   
+  </md-card-content>
+</md-card>

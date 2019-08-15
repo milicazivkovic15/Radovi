@@ -1,0 +1,69 @@
+footer
+{
+    background: #14171c !important;
+    overflow: hidden;
+    padding: 20px 10px;
+}
+
+div
+{
+    text-align: center;
+}
+
+textarea
+{
+    resize: none;
+    width:100%;
+    height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+h1,h3
+{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.anchor{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fa{
+    font-size: 27px;
+    padding: 10px !important;
+    width:70%;
+    margin: 0 15% !important;
+    color: #e8e8e8;
+    border: 2px solid #e8e8e8;
+    border-radius: 10px;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+table{
+    width: 80%;
+    margin:auto;
+}
+
+td{
+    width: 33% !important;
+}
+
+.fa:hover{
+    color: #05bca9;
+    border-color: #05bca9;
+}
+
+@media screen and (max-width:768px)
+{
+    .padder{
+        margin-bottom: 40px;
+    }
+}
+
+.form-control{
+    background: rgba(255,255,255,0.8);
+}

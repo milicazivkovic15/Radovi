@@ -1,0 +1,16 @@
+<div style="text-align:center; overflow-y: scroll; max-height: 70vh;">
+    <div class="f-modal-alert">
+
+        <div class="f-modal-icon f-modal-success animate">
+            <span class="f-modal-line f-modal-tip animateSuccessTip"></span>
+            <span class="f-modal-line f-modal-long animateSuccessLong"></span>
+            <div class="f-modal-placeholder"></div>
+            <div class="f-modal-fix"></div>
+        </div>
+    </div>
+    <h1>{{ "SuccessfullyRegistered" | translate }}</h1>
+    <span *ngIf="paid && !online"><h2>{{ "r2" | translate }}</h2></span>
+    <h3>{{ "ty" | translate }}</h3>
+    <br>
+    <img *ngIf="paid && !online" src={{picPath}}>
+</div>

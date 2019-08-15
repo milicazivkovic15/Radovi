@@ -1,0 +1,123 @@
+.full{
+    width: 100%;
+}
+
+.full:last-child{
+    position: relative;
+    top:-20px;
+}
+
+.full.fixPosition{
+    width:100%;
+}
+
+.full.fixPosition md-card{
+    width: 99% ;
+}
+
+@media screen and (max-width:991px){
+
+
+.fakeCard{     
+    position: relative !important;
+    top: -20px !important;
+}
+
+.full md-card app-map ng2-map{
+    position: relative !important;
+    left:8px !important;
+}
+    .full{
+    width: 102% !important;
+}
+
+.full md-card{
+    width: 99% !important;
+}
+
+md-card-content div{
+    width: 101%;
+}
+    .fixPosition{
+        position: relative;
+        left:-15px;
+        width: 106% !important;
+    }
+    
+}
+
+.fakeCardWithMargin md-card {
+    margin-left:0 !important;
+    margin-right: 0 !important;
+}
+
+.fakeCard md-card{
+    margin-right: 0 !important;
+}
+
+@media screen and (max-width:991px) and(min-width:769px)
+{
+    .width100{
+        margin-left: 8px !important;
+        position: relative;
+        top: -35px;
+    }
+
+}
+
+@media screen and (max-width:768px)
+{
+    .width100{
+        margin-left: 8px !important;
+        position: relative;
+        top: -35px;
+    }
+
+    .fakeCard{     
+        position: relative;
+        top: -80px !important;
+    }
+
+    .minWidth100{
+        margin-left: 8px !important;
+    }
+
+    .calcWidth{
+        width: calc(100% + 8px) !important;
+    }
+}
+
+
+table.special{
+    width:100%;
+    display: block;
+    max-height: 250px;
+    overflow: auto;
+}
+
+table.special span{
+    display: block;
+}
+
+table.special span,.special tbody,.special thead,.special tr{
+    width:100% !important;
+    display: block;
+}
+
+.special td,.special th{
+    display: block;
+    float:left;
+    text-align: center;
+}
+
+.specialHeight{
+    height: 47px;
+}
+
+.special td:first-child,.special th:first-child{
+    width:60%;
+}
+
+.special td:last-child,.special th:last-child{
+    width: 40%;
+}

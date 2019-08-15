@@ -1,0 +1,87 @@
+<div class="menuOffset"></div>
+<md-card class="col-xs-12 col-md-10 col-md-offset-1" style="padding: 0 !important; background: transparent !important; box-shadow: 0 0 0 0 !important">
+  <md-card-content class="noPaddingCard zeroContent">
+<md-card id="look" class="full" style="width: 48%; float: left; margin-top: 2px; margin-right: 3px;">
+  <md-card-title class="">{{"pregled kultura" | translate}}</md-card-title>
+  <span class="col-xs-12 col-sm-5">
+      <div style="width:100%;" class="input-group">
+        <input id="searchBox" #box (keyup)="filter(box.value)" style="border-radius: 4px" class="form-control" placeholder="{{'pretraga' | translate}}" [(ngModel)]="searchResult" />
+      </div>
+      <br>
+    </span>
+  <br>
+  <div class="table-responsive" style="width:100%">
+    <table class="table table-hover">
+      <tr>
+        <th>#</th>
+        <th style="text-align: left"> {{ "Name" | translate}}</th>
+        <th></th>
+        <th *ngIf="agr==true"></th>
+        <th *ngIf="agr==true"></th>
+      </tr>
+      <tr *ngFor="let c of filtered | paginate: { itemsPerPage: 10, currentPage: page }; let i = index">
+        <th scope="row" style="width: 10%" class="top-padd">{{i+1}}</th>
+        <td style="text-align: left;width: 60%" class="top-padd"> {{c.Title}} </td>
+        <td style="text-align: right;width: 10%" *ngIf="agr==true"><button class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="{{'izmeni' | translate }}" (click)="updateCrop(c.ID)"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+        <td style="text-align: right;width: 10%" *ngIf="agr==true"><button class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="{{'Obrisi'|translate}}" (click)="deleteCrop(c.ID)"><i class="fa fa-trash-o" aria-hidden="true"></i> </button></td>
+        <td style="text-align: right;width: 10%" [ngClass]="{'widthTd':!agr}"><button class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="{{'prikaziPodkulturu'|translate}}" (click)="showSubCrop(c.ID)"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+      </tr>
+    </table>
+  </div>
+  <span class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin: 3% 0%; width: 100%; text-align: right;">
+      <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </span>
+</md-card>
+<div  class="noPaddingCard full" style="width: 48%; float: left">
+  <md-card id="agrAdd" *ngIf="agr==true" class="fullCard" style="margin-top: 2px !important">
+    <md-card-title class="">{{"dodavanje kulture" | translate}}</md-card-title>
+
+    <div style="width:60%; margin:auto">
+      <form #formCtrl1="ngForm" novalidate (ngSubmit)="add()">
+        <span>{{"unesiteImeNoveKulture" | translate}}:</span>
+        <input type="text" class="form-control" value="" [(ngModel)]="newCrop" id="newCrop" required="required" [ngModelOptions]="{standalone: true}"
+         message-position="top"/>
+        <br>
+        <button type="submit"  class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> {{"dodaj" | translate}}</button>
+
+      </form>
+    </div>
+
+    <div style="margin:auto">{{error}}</div>
+  </md-card>
+  <md-card id="addSubID" [ngClass]="{'marginSetup':!agr}">
+
+    <md-card-title class="">{{"dodavanje podkulture" | translate}}</md-card-title>
+
+    <div style="width:60%; margin:auto">
+      <form #formCtrl1="ngForm" novalidate>
+        <span>{{"izaberite kulturu" | translate}}:</span>
+        <select id="cul" #sel [(ngModel)]="selected" (change)="changeSubscrops(sel.value)" class="form-control" required="required" [ngModelOptions]="{standalone: true}">
+              <option  *ngFor="let c of crops" value="{{c.ID}}" >{{c.Title}}</option> 
+            </select>
+        <br>
+        <span *ngIf="!agr">{{"unesite naziv podkulture" | translate}}:</span>
+        <input *ngIf="!agr" type="text" class="form-control" message-position="top" value="" [(ngModel)]="newSubCrop" id="subCrop" required="required" [ngModelOptions]="{standalone: true}"
+        />
+         <div *ngIf="agr"> <span>{{"unesite naziv podkulture" | translate}}:</span>
+          <input #box1 (ngModelChange)="filterNew(box1.value)" (keyup)="ref(box1)" class="form-control" auto-complete [(ngModel)]="subcrops" [source]="subscropsFilter"
+            [list-formatter]="showListCrops"  id="subcrops" required="required" [ngModelOptions]="{standalone: true}"
+            message-position="top"/> 
+        </div>
+        <br>
+        <div *ngIf="agr==true"> <span>{{"unesite naziv dobavljaca" | translate}}:</span>
+          <input #box  (ngModelChange)="filterM(box.value)" (keyup)="ref(box)" class="form-control" auto-complete [(ngModel)]="manuf" [source]="manufacturerFilter"
+            [list-formatter]="showList"  id="manuf" required="required" [ngModelOptions]="{standalone: true}"
+          message-position="top"/> 
+        </div>
+        <br>
+        <button (click)="addSub()" id="addSub"  class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> {{"dodaj" | translate}}</button>
+      </form>
+    </div>
+
+    <div style="margin:auto">{{error1}}</div>
+  </md-card>
+
+</div>
+  </md-card-content>
+</md-card>

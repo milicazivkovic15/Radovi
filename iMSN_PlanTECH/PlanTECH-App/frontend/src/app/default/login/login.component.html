@@ -1,0 +1,166 @@
+<section id="login">
+  <div class="overlay" id="over"></div>
+  <div class="row section-intro" id="bGround">
+    <div class="col-xs-12 col-md-4 col-md-offset-4 " style=" z-index:12;">
+      <ul class="nav nav-tabs">
+        <li class="active li"><a id="notActive" class="not" (click)="change(true)">{{ "Login" | translate }}</a></li>
+        <li class="li"><a class="not" (click)="change(false)"> {{ "Registration" | translate }}</a></li>
+      </ul>
+      <div class="myDIV">
+        <form *ngIf="status==false" id="formReg" novalidate #regForm="ngForm">
+          <div class="input-group">
+            <input type="text" name="fname" class="form-control" placeholder="{{ 'FirstName' | translate }}"
+              aria-describedby="basic-addon1" [(ngModel)]="user.fname" id="fname" pattern-type="alpha"
+              message-sr="Ime je jedna reč i treba da sadrži <br> samo slova"
+              message-en="First name is one word, and should contain <br> only letters" message-position="top" />
+            <span class="input-group-addon" id="basic-addon1" style="min-width: 39px"> <i
+                class="glyphicon glyphicon-user"></i></span>
+          </div>
+
+          <div class="input-group">
+            <input type="text" name="lname" class="form-control" aria-describedby="basic-addon1"
+              placeholder="{{ 'LastName' | translate }}" value="" [(ngModel)]="user.lname" id="lname"
+              pattern-type="alpha" message-sr="Prezime je jedna reč i treba da sadrži samo slova"
+              message-en="Last name is one word, and should contain only letters" message-position="top"
+              required="required" />
+            <span class="input-group-addon" id="basic-addon1" style="min-width: 39px"> <i
+                class="glyphicon glyphicon-user"></i> </span>
+          </div>
+
+          <div class="input-group">
+            <input type="text" class="form-control" aria-describedby="basic-addon1"
+              placeholder="{{ 'Username' | translate }}" value="" [(ngModel)]="user.username" id="name" name="name"
+              #name="ngModel" required="required" pattern-type="username"
+              message-sr="Korisničko ime može da sadrži samo slova i brojeve. Broj karaktera od 8 do 16"
+              message-en="Username can contain only letters and numbers. Length should be between 8 and 16 characters"
+              message-position="top" />
+            <span class="input-group-addon" id="basic-addon1" style="min-width: 39px">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+          </div>
+          <div class="input-group">
+            <input type="{{type1}}" class="form-control" aria-describedby="basic-addon1"
+              placeholder="{{ 'Password' | translate }}" name="siff" id="siff" value="" [(ngModel)]="user.password"
+              required="required" pattern-type="pass"
+              message-sr="Lozinka mora da sadrži najmanje jedno malo i jedno veliko slovo, kao i najmanje jedan broj i jedan specijalni karakter (-!?_*@). Broj karaktera od 8 do 16"
+              message-en="Password must contain at least one lower and one upper letter, and also at least one digit and special character (-!?_*@). Length should be between 8 and 16 characters"
+              message-position="top" />
+            <div class="input-group-addon" id="basic-addon1" style="min-width: 39px; padding: 0px">
+              <button type="button" style="width: 100%; background:transparent" (mousedown)="mousedown(1)"
+                (mouseup)="mouseup(1)" (mouseleave)="mouseup(1)"> <i class="glyphicon glyphicon-eye-open"></i></button>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <input type="{{type2}}" class="form-control" aria-describedby="basic-addon1"
+              placeholder="{{ 'aPassword' | translate }}" name="pass2" id="password2" [(ngModel)]="password2"
+              required="required" pattern-type="same_siff" message-sr="Ponovljena lozinka nije jednaka unetoj lozinci!"
+              message-en="Repeated password is not the same password inputed" message-position="top" />
+            <div class="input-group-addon" id="basic-addon1" style="min-width: 39px; padding: 0px">
+              <button type="button" style="width: 100%; background:transparent" (mousedown)="mousedown(2)"
+                (mouseup)="mouseup(2)" (mouseleave)="mouseup(2)"> <i class="glyphicon glyphicon-eye-open"></i></button>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <input type="text" class="form-control" aria-describedby="basic-addon1" placeholder="E-mail" value=""
+              [(ngModel)]="user.email" id="Email" name="Email" #Email="ngModel" required="required" pattern-type="email"
+              message-sr="E-mail adresa nije u ispravnom obliku!"
+              message-en="E-mail address is not in the correct format" message-position="top" />
+            <span class="input-group-addon" id="basic-addon1" style="min-width: 39px">
+              <i class="glyphicon glyphicon-envelope"></i>
+            </span>
+          </div>
+          <div class="input-group">
+            <input type="text" name="phone" class="form-control" aria-describedby="basic-addon1"
+              placeholder="{{ 'Phone' | translate }}" value="" [(ngModel)]="user.phone" id="Phone" pattern-type="phone"
+              message-sr="Broj telefona nije u ispravnom obliku!" message-en="Phone number is not in the correct format"
+              message-position="top" />
+            <div class="input-group-addon" id="basic-addon1" style="min-width: 39px">
+              <i class="glyphicon glyphicon-earphone"></i>
+            </div>
+          </div>
+
+          <form style="margin:auto; text-align:center" #form action="https://www.sandbox.paypal.com/cgi-bin/webscr"
+            method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="PLPK25R3GVFP4">
+            <input type="hidden" name="notify_url" value="http://147.91.204.116:2035/paypalRegistration/{{paidParams}}">
+            <table style="margin:auto">
+              <tr>
+                <td><input type="hidden" name="on0" value="Pla&#263;anje">{{ "Paket" | translate }}</td>
+              </tr>
+              <tr>
+                <td><select class="form-control" #nekiID (change)="changeSelect(nekiID)" name="os0" id="select"
+                    style="color: black">
+                    <option value="-1"> {{ "besplatan nalog" | translate }}</option>
+                    <option value="Osnovni paket -">{{ "Osnovni paket" | translate }} - €49.99 EUR</option>
+                    <option value="Srebrni paket -">{{ "Srebrni paket" | translate }} - €99.99 EUR</option>
+                    <option value="Zlatni paket -">{{ "Zlatni paket" | translate }} - €149.99 EUR</option>
+                  </select></td>
+              </tr>
+            </table>
+            <input type="hidden" name="currency_code" value="EUR">
+
+            <span *ngIf="paid">
+              {{"nacin placanja" | translate}}:<br>
+              <input type="radio" name="paymentType" (click)="setOnline(false)" checked>
+              {{ "preko racuna" | translate }}<br>
+              <input type="radio" name="paymentType" (click)="setOnline(true)"> {{ "online" | translate }}<br>
+            </span>
+            <button *ngIf="!online" (click)="registration(regForm)" class="btn btn-hero btn-lg"><i
+                class="glyphicon glyphicon-check"></i> {{ "Register" | translate }}</button>
+
+            <button *ngIf="paid && online" (click)="submitPaid(form)"
+              style="background: transparent; border: none;"><img id="regButton" src="{{paidButtonPath}}"></button>
+          </form>
+        </form>
+
+        <form id="loginForm" *ngIf="status==true" novalidate #loginForm="ngForm">
+          <div class="form-group">
+            <div class="input-group">
+              <input id="userVal" pattern-type="username"
+                message-sr="Korisničko ime može da sadrži samo slova i brojeve. Broj karaktera od 8 do 16"
+                message-en="Username can contain only letters and numbers. Length should be between 8 and 16 characters"
+                message-position="top" type="text" name="usr" class="form-control" aria-describedby="basic-addon1"
+                placeholder="{{ 'Username' | translate }}" value="" [(ngModel)]="username" #usr="ngModel" />
+              <span class="input-group-addon" id="basic-addon1" style="min-width: 39px">
+                <i class="glyphicon glyphicon-user"></i>
+              </span>
+            </div>
+
+            <div class="input-group">
+              <input id="passVal" pattern-type="pass"
+                message-sr="Lozinka mora da sadrži najmanje jedno malo i jedno veliko slovo, kao i najmanje jedan broj i jedan specijalni karakter (-!?_*@). Broj karaktera od 8 do 16"
+                message-en="Password must contain at least one lower and one upper letter, and also at least one digit and special character (-!?_*@). Length should be between 8 and 16 characters"
+                message-position="top" type="{{type}}" class="form-control" aria-describedby="basic-addon1"
+                placeholder="{{ 'Password' | translate }}" value="" [(ngModel)]="password" name="pas" #pas="ngModel"
+                required="required" />
+
+              <div class="input-group-addon" id="basic-addon1" style="min-width: 39px; padding: 0px">
+                <button type="button" style="width: 100%; background:transparent" (mousedown)="mousedown(0)"
+                  (mouseup)="mouseup(0)" (mouseleave)="mouseup(0)"> <i
+                    class="glyphicon glyphicon-eye-open"></i></button>
+              </div>
+            </div>
+          </div>
+          <a (click)="forgotenPass()" class="not" style="cursor:pointer"><i
+              class="not">{{ "ForgetPasswordLink" | translate }}</i></a>
+          <br>
+          <button (click)="login(loginForm)" class="btn btn-hero btn-lg"><i class="glyphicon glyphicon-log-in"></i>
+            {{ "SingUp" | translate }}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media screen and (max-width: 767px) {
+    .active {
+      border: 0;
+      border-bottom: 5px solid #1abc9c;
+      ;
+    }
+  }
+</style>

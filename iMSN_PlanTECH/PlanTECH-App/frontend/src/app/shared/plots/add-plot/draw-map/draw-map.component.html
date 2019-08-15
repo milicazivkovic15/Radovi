@@ -1,0 +1,12 @@
+<input id="search2" class="form-control" style="max-width: 70%;" places-auto-complete #search (place_changed)="placeChanged($event)" [types]="['geocode']"
+  placeholder="{{'pretraga lokacije' | translate}}...">
+<br>
+<span>{{"povrsina" | translate}}: {{surface}}</span><br>
+<i style="float: left">*{{"dk" | translate}}</i>
+<button id="res" class="btn btn-danger" style="background-color: #1abc9c;" (click)="restart()" style="float: right; margin-right: 20px;"><i class="fa fa-trash-o fa-lg"></i> {{"izbrisi sve" | translate}}</button><br>
+<br>
+  <ng2-map #target center="{{center}}" (mapClick)="onMapClick($event)" (mousemove)="onMouseMove($event)" (rightclick)="removeCoord($event)"
+    streetViewControl="false" disableDoubleClickZoom="true" mapTypeId="satellite">
+  </ng2-map>
+  <br>
+  <i>*{{"kraj" | translate}}</i>

@@ -1,0 +1,11 @@
+<md-card id="graphic" style="width: 100%; padding-bottom: 0px; padding-left: 0px; padding-right: 0px" *ngIf="selected!=-1 || flag"> 
+  <span style="margin-left: 24px; float:left;">{{"Izaberite senzor" | translate}}:&nbsp;</span>
+  <div style="float:left; width:50%; clear:right; margin-bottom:30px;"><select class="form-control" value="{{selected}}" #select (change)="change(select.value)">
+    <optgroup *ngFor="let group of sensors" label="{{firstCapital(group.ime) | translate}}">
+       <option  *ngFor="let sensor of group.list; let i = index" value="{{sensor.ID}}" >{{"senzor za" | translate}} {{sensor.ime | translate}} - {{i+1}}</option>     
+    </optgroup>  
+  </select></div>
+  <plotly-chart #chart *ngIf="message==''" style="width:100%; position:relative; top:20px"></plotly-chart>
+  <h3 *ngIf="message!=''" style="text-align: center; width:100%; position:relative; top:20px; clear:both">{{message}}</h3>
+  <br>
+</md-card>

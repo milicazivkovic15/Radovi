@@ -1,0 +1,36 @@
+.activeTab{
+    border: 1px solid #e8e8e8;
+    border-bottom: none !important;
+    background-color: transparent !important;
+}
+
+.widgetHover:hover{
+    background-color: #f2f2f2;
+}
+
+.customFont{
+    font-size: 70px; 
+}
+
+@media screen and (min-width:992px) and (max-width:1200px)
+{
+    .customFont{
+        font-size:50px;
+    }
+}
+
+@media screen and (max-width:450px){
+    .minFont{
+        font-size: 8pt !important;
+    }
+}
+
+@media screen and (max-width:500px){
+    .customFont{
+        font-size:40px;
+    }
+}
+
+#forecast *{
+    color:black;
+}

@@ -1,0 +1,43 @@
+<nav class="navbar navbar-inverse navbar-fixed-top specialSize blueMenu smallMenu">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button (click)="setHeightAnimated()" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar ourColor"></span>
+        <span class="icon-bar ourColor"></span>
+        <span class="icon-bar ourColor"></span>                        
+      </button>
+        <a>
+          <img [src]="logoPath"  routerLink="plantaze" style="width: 35px; height: 35px; margin-right: 30px; position:relative; top:-3px" ng-disabled="true" />
+        </a>
+    </div>
+    <div class="collapse navbar-collapse blueMenu" id="myNavbar">
+      <ul class="nav navbar-nav blueMenu fix">
+        <li *ngFor="let item of items">
+          <a *ngIf="item.text!='Upravljanje sistemom' && item.icon!='glyphicon glyphicon-tree-deciduous'" (click)="setFake(false); collapse()" class="menuLink hand" routerLink="{{item.anchor}}" routerLinkActive="active">
+            <i style="font-size: 20px" class="{{item.icon}} hand" aria-hidden="true"></i> 
+            {{ item.text | translate }}
+            <span style="position: relative; top: -3px;" *ngIf='item.anchor=="obavestenja"' class="badge">{{numNotif}}</span>
+            </a>
+          <a style="position:relative !important; top:-5px !important" *ngIf="item.text!='Upravljanje sistemom' && item.icon=='glyphicon glyphicon-tree-deciduous'" (click)="setFake(false); collapse()" class="menuLink hand topZero" routerLink="{{item.anchor}}" routerLinkActive="active">
+            <i style="font-size: 20px" class="{{item.icon}} hand" aria-hidden="true"></i> 
+            {{ item.text | translate }}
+            <span style="position: relative; top: -3px" *ngIf='item.anchor=="obavestenja"' class="badge">{{numNotif}}</span>
+            </a>
+          <a style="margin-top:0px; position:relative; top:-10px !important" id="fake" onload="setFakeOnLoad()" *ngIf="item.text=='Upravljanje sistemom'" class="dropdown-toggle menuLink hand not" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            <i class="{{item.icon}}" aria-hidden="true" ></i> {{item.text | translate}}<span class="caret"></span>
+          </a>   
+          <ul class="dropdown-menu not" *ngIf="item.text=='Upravljanje sistemom'">
+              <li *ngFor="let item of dropdownItems" >
+                <a class="menuLink hand" routerLink="{{item.anchor}}" (click)="setFake(true); collapse()" routerLinkActive="active"><i class="{{item.icon}}" aria-hidden="true"></i>{{item.text | translate}}</a>
+              </li>
+            </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="logout" style="float: right; margin-left:0px">          
+          <a class="menuLink hand" (click)="logOut()"><i style="position: relative; top:2px; font-size: 20px" class="fa fa-sign-out" aria-hidden="true"></i> {{ "LogOut" | translate }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,6 @@
+<input id="search2" class="form-control" style="max-width: 70%;" places-auto-complete #search (place_changed)="placeChanged($event)" [types]="['geocode']"
+  placeholder="{{'pretraga lokacije' | translate}}...">
+<br>
+  <ng2-map #target center="{{center}}" (mapClick)="onMapClick($event)"
+    streetViewControl="false" disableDoubleClickZoom="true" mapTypeId="satellite">
+  </ng2-map>

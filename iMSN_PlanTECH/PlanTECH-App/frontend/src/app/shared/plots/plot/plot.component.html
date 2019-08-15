@@ -1,0 +1,130 @@
+<div class="menuOffset"></div>
+<md-card id="content" class="fakeCardWithSideMenu noCard">
+    <md-card-title style="margin-bottom:0 !important">
+        {{data.Title}}
+        <span *ngIf="data.Edit" style="float: right;">
+            <button id="change" type="submit" class="btn btn-primary"  (click)="edit()"><i class="fa fa-pencil" aria-hidden="true"></i> {{text}}</button>
+            <button type="submit" class="btn btn-danger" *ngIf="editable" style="margin-left: 25px;" (click)="revert()"> <i class="fa fa-reply fa-lg"></i> {{"otkazi" | translate}}</button>
+            <button type="submit" class="btn btn-danger" *ngIf="!editable" style="margin-left: 25px;" (click)="delete()"> <i class="fa fa-trash-o fa-lg"></i> {{"izbrisi" | translate}}</button>
+        </span>
+    </md-card-title>
+    <md-card-content class="noPaddingCard" style="top: -12px !important">
+        <div class="fakeCardWithMargin" [ngClass]="{'full':editable}">
+            <md-card style="width: 100%; margin-left:8px !important" id="data">
+                <md-card-title class="noCard">{{"osnovni podaci" | translate}}</md-card-title>
+                <div *ngIf="!editable">
+                    <div *ngIf="data.No">{{"Katastarski broj parcele" | translate}}: {{data.No}}</div>
+                    <div *ngIf="data.Owner"><b>&nbsp;{{"vlasnik" | translate}}:</b> {{data.Owner}}</div>                       
+                    <div style="float: right" *ngIf="surface">{{"povrsina" | translate}}: {{surface}}</div><br>
+                    <div>
+                        <div class="table-responsive " *ngIf="crops.length" style="width: 100%; padding: 0 3px;">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: left;">{{"zasadjene kulture" | translate}}:</th>
+                                    </tr>
+                                </thead>
+                                <tr *ngFor="let crop of crops">
+                                    <td> {{crop.Name}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="editable">
+                    <div class="col-xs-12 col-md-6">
+                        <div>
+                            <div style="clear:both"><span style="float:left">{{"ime parcele" | translate}}:&nbsp;</span><div style="float:left; width:40%; clear:right"> <input class="form-control" type="text" [(ngModel)]="data.Title" id="title" message-position="top"></div></div>
+                            <div><span style="float:left; clear:left; margin:5px 0">{{"Katastarski broj parcele" | translate}}:&nbsp;</span><div style="float:left; width:40%; clear:right; margin:5px 0"> <input class="form-control" type="text" [(ngModel)]="data.No"></div></div>
+                            <div style="clear:both" *ngIf="surface">{{"povrsina" | translate}}: {{surface}}&nbsp;&nbsp;&nbsp;</div><br>
+                            <div *ngIf="otherCrops.length>0" style="width: 100%; clear:both">
+                                <div style="float:left; width:60%">
+                                <select #cropSel class="form-control">
+                                    <optgroup *ngFor="let crop of otherCrops" label={{crop.Title}}>
+                                        <option *ngFor="let sub of crop.subcrops" value={{sub.ID}}>{{sub.title}}</option>
+                                    </optgroup>        
+                                </select>
+                                </div>
+                                <div style="float:left;">
+                                    <button class="btn btn-success" style="float: lef;margin-left: 10px" (click)="add(cropSel.value)"><i class="fa fa-plus" aria-hidden="true"></i> {{"dodaj" | translate}}</button>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="table-responsive" *ngIf="crops.length" style="width:80%">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: center; margin-top:-10px" >{{"zasadjene kulture" | translate}}</th>
+                                        <th><button (click)="deleteAllCrops()" md-button>{{"izbrisi sve" | translate}}</button></th>
+                                    </tr>
+                                </thead>
+                                <tr *ngFor="let crop of crops">
+                                    <td class="top-padd"> {{crop.Name}}</td>
+                                    <td *ngIf="editable"> <button (click)="deleteCrop(crop.ID)" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom"
+                                            title="{{'Obrisi'|translate}}"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="table-responsive" style="width: 80%">
+                            <table class="table table-hover special" *ngIf="sensors!=null">
+                                <span class="table table-hover" *ngFor="let type of sensors; let j = index;">
+                    <thead><tr style="width:100%">
+                        <th>{{type.ime | translate}}</th>
+                        <th>&nbsp;</th>
+                    </tr></thead>
+                    <tr *ngFor="let sensor of type.all; let i = index">
+                        <td >{{"senzor za" | translate}} {{sensor.ime | translate}} {{i+1}}</td>
+                        <td ><span style="margin-left:-20px" class="material-switch ">
+                                    <input (click)="check(sensor)" class="cursor" id="2someSwitchOptionSuccess2{{j}}{{i}}" name="someSwitchOption001" [(ngModel)]="sensor.used"  type="checkbox"/>
+                                    <label for="2someSwitchOptionSuccess2{{j}}{{i}}" class="label-success"></label>
+                                    </span></td>
+                                </tr>
+                                </span>
+                            </table>
+                        </div>
+                        <br>
+                        <div>
+                            {{"Dodajte senzor preko IP adrese" | translate}}:<br>
+                            <span> <input class="form-control" style="margin-right: 0px; width: 200px; float: left;" type="text" [(ngModel)]="ip"><button (click)="getByIp()" class="btn btn-success" style="margin-left: 10px;"><i class="fa fa-plus" aria-hidden="true"></i> {{"dodaj" | translate}}</button></span>
+                        </div>
+                    </div>
+                </div>
+            </md-card>
+            <md-card style="width: 100%; margin-left: 8px !important" *ngIf="toDos.length && !editable" id="work">
+                <md-card-title class="noCard">{{"Za uraditi" | translate}}:</md-card-title>
+                <div class="table-responsive" style="width: 100%; padding: 0">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center;width: 50px;">{{"datum" | translate}}</th>
+                                <th style="text-align: center;">{{"Preporuka" | translate}}</th>
+                                <th style="text-align: center;">{{"Ispunjeno" | translate}}</th>
+                            </tr>
+                        </thead>
+                        <tr *ngFor="let toDo of toDos">
+                            <td style="text-align: center;" style="width: 50px;"> {{toDo.Date}}
+                            </td>
+                            <td style="text-align: center;"> {{toDo.Title}}
+                            </td>
+                            <td style="text-align: center;"> <input [(ngModel)]="toDo.ToDo" type="checkbox" (change)="changeToDo(toDo.ID,toDo.ToDo)" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </md-card>
+            <app-sensor-data-graphic [fake]="fakeFlag" class="width100 minWidth100" *ngIf="!editable" #graphic></app-sensor-data-graphic>
+        </div>
+        <div class="fakeCard" [ngClass]="{'full':editable}">
+            <md-card class="minWidth100" style="width:100%">
+                <app-map #map></app-map>
+            </md-card>
+            <md-card id="weather" *ngIf="!editable" class="minWidth100" style="width:100%">
+                <app-todays-weather></app-todays-weather>
+            </md-card>
+        </div>
+    </md-card-content>
+</md-card>

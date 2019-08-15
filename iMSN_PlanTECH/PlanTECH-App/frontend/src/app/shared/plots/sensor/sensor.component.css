@@ -1,0 +1,91 @@
+.full{
+    width: 100% !important;
+}
+
+.full.fakeCard{
+    margin-top:0 !important;
+    position: relative !important;
+    top:-5px;
+}
+
+
+.fakeCardWithMargin md-card,.fakeCard md-card{
+    margin-left:0 !important;
+    margin-right: 0 !important;
+}
+
+@media screen and (max-width:991px) and(min-width:769px)
+{
+    .width100{
+        margin-left: 8px !important;
+        position: relative;
+        top: -35px;
+    }
+
+}
+
+@media screen and (max-width:768px)
+{
+    .width100{
+        margin-left: 8px !important;
+        position: relative;
+        top: -35px;
+    }
+
+    .minWidth100{
+        margin-left: 8px !important;
+    }
+
+    .calcWidth{
+        width: calc(100% + 8px) !important;
+    }
+
+    .fakeCard{
+        margin-top:0 !important;
+    }
+}
+
+.noPaddingCard{
+    margin-left: 8px !important;
+    width:100% !important;
+}
+
+table{
+    width:100%;
+    display: block;
+    max-height: 250px;
+    overflow: auto;
+}
+
+table span{
+    display: block;
+}
+
+table span, tbody,thead,tr{
+    width:100% !important;
+    display: block;
+}
+
+td,th{
+    display: block;
+    float:left;
+    text-align: center;
+}
+
+.specialHeight{
+    height: 47px;
+}
+
+td:first-child,th:first-child{
+    width:60%;
+}
+
+td:last-child, th:last-child{
+    width: 40%;
+}
+
+@media screen and (max-width:991px){
+    .marginTop{
+        margin-top:50px !important;
+    }
+}

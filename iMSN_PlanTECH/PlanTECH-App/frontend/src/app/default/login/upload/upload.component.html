@@ -1,0 +1,105 @@
+<div *ngIf="!status">
+  <label class="btn btn-primary btn-file">
+<i class="fa fa-picture-o fa-lg"></i> {{ "ChoosePicture" | translate }} <input  ng2FileSelect  [uploader]="uploader" (click)='uploader.clearQueue()' type="file" style="display: none;">
+</label>
+  <br><br>
+  <div style="min-width:80%; max-width:50%; margin:auto; height:160px; text-align:center;" ng2FileDrop accept=".zip" type="file"
+    ng2FileSelects [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" (fileOver)="fileOverBase($event)" [uploader]="uploader"
+    class="well my-drop-zone">
+    <i class="fa fa-picture-o" style="font-size:80pt; opacity:.15"></i><br> {{ "DragTheImage" | translate }}
+  </div>
+  <br>
+  <table style="min-width:80%; max-width:50%; margin:auto;" class="table">
+    <thead>
+      <tr>
+        <th>{{ "Name" | translate }}</th>
+        <th>{{ "Size" | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of uploader.queue">
+        <td><strong>{{ item?.file?.name }}</strong></td>
+        <td nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <div><br> {{ "Upload progres" | translate }}
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploader.progress + '%' }"></div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-success" (click)="upload()"><i class="fa fa-send-o fa-lg"></i> {{ "Send" | translate }}</button>
+</div>
+<div *ngIf="status">
+  <button class="btn btn-primary" (click)="change()" style="float:right;">{{message}}</button>
+  <div *ngIf="!online">
+      <label class="btn btn-primary btn-file">
+<i class="fa fa-picture-o fa-lg"></i> {{ "ChoosePicture" | translate }} <input  ng2FileSelect  [uploader]="uploader" (click)='uploader.clearQueue()' type="file" style="display: none;">
+</label>
+  <br><br>
+    <div style="min-width:80%; max-width:50%; margin:auto; height:160px; text-align:center;" ng2FileDrop accept=".zip" type="file"
+      ng2FileSelects [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" (fileOver)="fileOverBase($event)" [uploader]="uploader"
+      class="well my-drop-zone">
+      <i class="fa fa-picture-o" style="font-size:80pt; opacity:.15"></i><br> {{ "DragTheImage" | translate }}
+    </div>
+    <br>
+    <table style="min-width:80%; max-width:50%; margin:auto;" class="table">
+      <thead>
+        <tr>
+          <th>{{ "Name" | translate }}</th>
+          <th>{{ "Size" | translate }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of uploader.queue">
+          <td><strong>{{ item?.file?.name }}</strong></td>
+          <td nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <div><br> {{ "Upload progres" | translate }}
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploader.progress + '%' }"></div>
+        </div>
+      </div>
+    </div>
+    <table style="margin:auto">
+        <tr>
+          <td><input type="hidden" name="on0" value="Pla&#263;anje">{{Paket|translate}}</td>
+        </tr>
+        <tr>
+          <td><select #sel (change)="onChange(sel)" name="os0" style="color: black" class="form-control">
+      <option value="Osnovni paket -">{{'Osnovni paket' | translate}} - €49.99 EUR</option>
+      <option value="Srebrni paket -">{{'Srebrni paket' | translate}} - €99.99 EUR</option>
+      <option value="Zlatni paket -">{{'Zlatni paket' | translate}} - €149.99 EUR</option>
+    </select> </td>
+        </tr>
+      </table>
+    <button type="button" class="btn btn-success" (click)="upload()"><i class="fa fa-send-o fa-lg"></i> {{ "Send" | translate }}</button>
+  </div>
+  <div *ngIf="online">
+  <br><br>
+    <form style="width:40%; margin:auto; text-align: center;" #form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="PLPK25R3GVFP4">
+      <input type="hidden" name="notify_url" value="http://147.91.204.116:2035/paypalUpdate/{{arg}}">
+      <table style="margin:auto">
+        <tr>
+          <td><input type="hidden" name="on0" value="Pla&#263;anje">{{Paket|translate}}</td>
+        </tr>
+        <tr>
+          <td><select name="os0" style="color: black" class="form-control">
+      <option value="Osnovni paket -">{{'Osnovni paket' | translate}} - €49.99 EUR</option>
+      <option value="Srebrni paket -">{{'Srebrni paket' | translate}} - €99.99 EUR</option>
+      <option value="Zlatni paket -">{{'Zlatni paket' | translate}} - €149.99 EUR</option>
+    </select> </td>
+        </tr>
+      </table>
+      <input type="hidden" name="currency_code" value="EUR">
+      <button (click)="submitPaid(form)" style="background: transparent; border: none;"><img src="{{paidButtonPath}}"></button>
+    </form>
+  </div>
+</div>

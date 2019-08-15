@@ -1,0 +1,44 @@
+@media screen and (max-width:768px){
+    .fakeCard{
+        margin-top: 0 !important;
+    }
+}
+
+
+.form-control{
+    border-radius: 4px !important;
+}
+
+table{
+    width:100%;
+    display: block;
+    max-height: 250px;
+    overflow: auto;
+}
+
+table span{
+    display: block;
+}
+
+table span, tbody,thead,tr{
+    width:100% !important;
+    display: block;
+}
+
+td,th{
+    display: block;
+    float:left;
+    text-align: center;
+}
+
+.specialHeight{
+    height: 54px;
+}
+
+td:first-child,th:first-child{
+    width:70%;
+}
+
+td:last-child, th:last-child{
+    width: 30%;
+}

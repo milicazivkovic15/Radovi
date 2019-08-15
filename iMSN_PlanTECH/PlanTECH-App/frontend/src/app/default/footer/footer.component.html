@@ -1,0 +1,32 @@
+<footer style="clear:both; z-index: 50; position: relative; padding-top:25px">
+  <div class="col-xs-12 col-md-4 padder">
+    <br>
+    <h1>PlanTECH - iMSN</h1><br>
+    <h3>Skrelićeva 21</h3>
+    <h3>34000 Kragujevac</h3><br>
+    E-mail: <i>imsn.plantech@gmail.com</i><br>
+    <br><br>
+    <table>
+      <tr>
+        <td><a class="anchor not" href="https://www.facebook.com/iMSNco/" target="_blank"><i class="not fa fa-facebook"></i></a></td>
+        <td><a class="anchor not" href="https://plus.google.com/u/1/115501206682427965154" target="_blank"><i class="not fa fa-google-plus"></i></a></td>
+        <td><a class="anchor not" href="https://www.linkedin.com/company/imsn" target="_blank"><i class="not fa fa-linkedin"></i></a></td>
+      </tr>
+    </table>  
+  </div>
+  <div class="col-xs-12 col-md-4 padder">
+    <h1 style="padding-bottom: 10px">{{ "OurLocation" | translate }}</h1>
+    <ng2-map center={{center}}>
+      <marker *ngFor="let pos of coord"
+        [position]="pos"></marker>
+    </ng2-map>
+  </div>
+  <div class="col-xs-12 col-md-4">
+    <h1>{{ "ContactUs" | translate }}</h1>
+    <i style="float:left">{{ "YourMessage" | translate }}</i>
+    <textarea [(ngModel)]="text" class="form-control"></textarea><br>
+    <span style="position: relative; top:-10px"><span class="col-xs-4"><i>{{ "YourEmail" | translate }}:</i></span><span class="col-xs-8"><input id="email" pattern-type="email" message-sr="E-mail adresa nije u ispravnom obliku!" message-en="E-mail address is not in the correct format"  message-position="top" class="form-control" [(ngModel)]="email" type="text" placeholder="e-mail" style="text-align: center"></span></span><br>
+    <br>
+    <button class="btn btn-primary" (click)="sendMail()">{{ "ContactUs" | translate }}</button>
+  </div>
+</footer>

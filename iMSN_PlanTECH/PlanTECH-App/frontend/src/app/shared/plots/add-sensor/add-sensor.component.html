@@ -1,0 +1,47 @@
+<div class="menuOffset"></div>
+<md-card class="fakeCardWithSideMenu noCard" id="content">
+  <md-card-title>{{"novi senzor" | translate}}
+    <button id="addSen" class="btn btn-success" style="float: right; margin-right: 1%;" (click)="save()"><i class="fa fa-plus" aria-hidden="true"></i> {{"dodaj senzor" | translate}}</button>
+  </md-card-title>
+  <md-card-content class="noPaddingCard zeroContent">
+    <md-card class="fakeCardWithMargin" id="grafi">
+      <app-sensor-map #map></app-sensor-map>
+    </md-card>
+    <md-card class="fakeCard" id="data">
+      <span class="col-xs-12" style="padding-left:0 !important;margin-bottom:10px !important;">
+          <span style="float:left">{{"tip senzora" | translate}}:</span>
+          <div style="width:40%; float:left; padding-left:5px"><select class="form-control" [(ngModel)]="type">
+            <option *ngFor="let st of sensorTypes;" value="{{st.id}}">{{st.ime | translate}}</option>
+          </select></div>
+        </span>
+      <span class="col-xs-12" style="padding-left:0 !important;margin-bottom:10px !important;" *ngIf="showAll">
+          <span style="float:left">{{"vlasnik" | translate}}: </span>
+          <div style="width:30%; float:left; padding-left:5px"><select class="form-control" [(ngModel)]="selected" #select (change)="loadParcels(select.value)">
+            <option *ngFor="let u of users" value="{{u.ID}}">{{u.Name}}</option>
+          </select></div>
+        </span>
+      <span><span style="float:left">{{"ip adresa senzora" | translate}}: </span>
+          <div style="width:40%; float:left; padding-left:5px"><input class="form-control" type="text" [(ngModel)]="ip" pattern-type="ip" message-sr="IP adresa nema odgovarajući oblik! <br> 0-255.0-255.0-255.0-255" message-en="IP address is not in the correct format! <br> 0-255.0-255.0-255.0-255"  message-position="top" id="ip"></div>
+        </span>
+    </md-card>
+    <md-card class="fakeCard" id="parcel">
+      <div class="table-responsive" style="width: 100%">
+            <table class="table table-hover">
+        <thead>
+          <tr style="width:100%">
+            <th class="specialHeight" style="padding-top:20px">{{"ime parcele" | translate}}</th>
+            <th><button md-button (click)="all()">{{message}}</button></th>
+          </tr>
+        </thead>
+        <tr *ngFor="let p of parcels;let i = index">
+          <td style="width:70%">{{p.Title}}</td>
+          <td style="text-align: center; width:30%"><span style="margin-left: -15px;" class="material-switch ">
+                <input class="cursor" id="2someSwitchOptionSuccess2{{i}}" name="someSwitchOption001" [(ngModel)]="p.selected"  type="checkbox"/>
+                <label for="2someSwitchOptionSuccess2{{i}}" class="label-success"></label>
+                </span></td>
+        </tr>
+      </table>
+      </div>
+    </md-card>
+  </md-card-content>
+</md-card>

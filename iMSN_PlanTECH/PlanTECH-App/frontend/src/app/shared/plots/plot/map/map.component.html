@@ -1,0 +1,9 @@
+<ng2-map #target
+  center="{{center}}" 
+  (mapReady$)="onMapReady($event)"
+  (mapClick)="onMapClick($event)"
+  streetViewControl="false"
+  disableDoubleClickZoom="true"
+  mapTypeId="satellite"
+  style="height: 400px">
+</ng2-map>

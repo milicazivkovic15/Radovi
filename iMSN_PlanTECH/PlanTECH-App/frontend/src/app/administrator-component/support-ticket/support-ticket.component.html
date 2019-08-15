@@ -1,0 +1,29 @@
+<div class="menuOffset"></div>
+<md-card class="col-md-10 col-md-offset-1">
+    <md-card-title>{{ "Tehnička podrška"| translate }}</md-card-title>
+    <md-card-content class="noPaddingCard">
+            <div class="table-responsive" style="width: 100%">
+                <table class="table table-hover" >
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>{{ "Autor"| translate }}</th>
+                            <th>{{ "content"| translate }}</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                        <tr *ngFor="let ticket of tickets | paginate: { itemsPerPage: 10, currentPage: page }; let i = index">
+                            <th class="top-padd" scope="row">{{i+1}}</th>              
+                            <td class="top-padd">{{ticket.fullName}}</td>
+                            <td class="top-padd">{{ticket.shortText}}</td>
+                            <td><button style="float:right" class="btn btn-primary" (click)="open(ticket.ID)"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> {{"Answers"| translate}}</button></td>
+                            <td><button style="float:left" class="btn btn-danger" (click)="deleteAs(ticket.ID)"><i class="fa fa-trash-o fa-lg"></i> {{"Obrisi"|translate}}</button></td>
+                
+                        </tr>    
+                </table>
+            </div>
+        <span class="col-lg-6 col-md-6 col-sm-12 col-xs-12"style="margin: 1% 0%; width: 100%; text-align:right;">
+            <pagination-controls (pageChange)="page = $event"></pagination-controls>
+        </span>
+    </md-card-content>
+</md-card>

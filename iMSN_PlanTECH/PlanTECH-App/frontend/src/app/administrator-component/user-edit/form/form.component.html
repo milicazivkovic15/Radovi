@@ -1,0 +1,51 @@
+ <div class="myDIV col-xs-12 col-md-8 col-md-offset-2 content " style=" z-index:12;">
+    <ul class="nav nav-tabs">
+      <li class="active li"><a id="notActive" class="not" (click)="flip(false)">{{ "Izmena podataka"| translate }}</a></li>
+      <li class="li"><a class="not" (click)="flip(true)">{{ "change password"| translate }}</a></li>
+    </ul>
+        <div *ngIf="changePass==false">
+
+        <form #formCtrl1="ngForm" novalidate (ngSubmit)="saveChanges()">
+          <br><span>{{ "FirstName"| translate }}</span><input  style="max-width: 300px; margin: 0 auto;" class="form-control" type="text" value="" [(ngModel)]="user.Fname" id="fname" required="required" [ngModelOptions]="{standalone: true}"
+          pattern-type="alpha"message-sr="Ime je jedna reč i treba da sadrži samo slova" message-en="First name is one word, and should contain only letters" message-position="top" />
+          <span>{{ "LastName"| translate }}</span><input  style="max-width: 300px; margin: 0 auto;" class="form-control" type="text" value="" [(ngModel)]="user.Lname" id="lname" required="required" [ngModelOptions]="{standalone: true}"
+          pattern-type="alpha"message-sr="Prezime je jedna reć i treba da sadrži samo slova" message-en="Last name is one word, and should contain only letters" message-position="top" />
+          <span>{{ "Username"| translate }}*</span><input  style="max-width: 300px; margin: 0 auto;" class="form-control" type="text" value="" [(ngModel)]="user.Username" id="username" required="required"
+            [ngModelOptions]="{standalone: true}" pattern-type="username" message-sr="Korisničko ime može da sadrži samo slova i brojeve. Broj karaktera od 8 do 16" message-en="Username can contain only letters and numbers. Length should be between 8 and 16 characters" message-position="top" />
+          <span>E-mail*</span><input type="text"  style="max-width: 300px; margin: 0 auto;"  class="form-control" value="" [(ngModel)]="user.email" id="Email" required="required" [ngModelOptions]="{standalone: true}"
+           pattern-type="email" message-sr="E-mail adresa nije u ispravnom obliku!" message-en="E-mail address is not in the correct format!" message-position="top"  />
+          <span>{{ "Phone"| translate }}</span><input type="text"  style="max-width: 300px; margin: 0 auto;"  class="form-control" value="" [(ngModel)]="user.Phone" id="phone" name="phone"  pattern-type="phone" message-sr="Broj telefona nije u ispravnom obliku!" message-en="Phone number is not in the correct format!" message-position="top"/>
+<br>
+          <button type="submit" class="btn btn-success" ><i class="uk-icon-save"></i> {{ "save change"| translate }}</button>
+         
+        </form>
+    </div>
+    <div *ngIf="changePass==true">
+      <form #formCtrl1="ngForm" novalidate (ngSubmit)="savePass()">
+        <br><span>{{ "NewPass"| translate }}:</span>
+
+        <div class="input-group">
+          <input type="{{type1}}"   class="form-control" aria-describedby="basic-addon1" placeholder="Lozinka" name="siff" id="siff"
+            #siff="ngModel" value="" [(ngModel)]="newPass" required="required"  pattern-type="pass" message-sr="Lozinka mora da sadrži najmanje jedno malo i jedno veliko slovo, kao i najmanje jedan broj i jedan specijalni karakter (-!?_*@). Broj karaktera od 8 do 16" message-en="Password must contain at least one lower and one upper letter, and also at least one digit and special character (-!?_*@). Length should be between 8 and 16 characters" message-position="top" />
+   
+          <div class="input-group-addon" id="basic-addon1" style="min-width: 39px; padding: 0px;border-color:#ccc; background:#eee">
+            <button type="button" style="width: 100%; border:none; background:transparent" (mousedown)="mousedown(1)" (mouseup)="mouseup(1)" (mouseleave)="mouseup(1)"> <i class="glyphicon glyphicon-eye-open"></i></button>
+          </div>
+        </div>
+        <br><span>{{ "aPassword"| translate }}:</span>
+
+        <div class="input-group">
+          <input type="{{type2}}"   class="form-control" aria-describedby="basic-addon1" placeholder="Lozinka" name="siff" id="siff2" message-position="top" 
+           value="" [(ngModel)]="pass2" required="required" />
+          <!--pattern="/^[a-z0-9]{8,16}$/"-->
+          <div class="input-group-addon" id="basic-addon1" style="min-width: 39px; padding: 0px; background:#eee; border-color:#ccc">
+            <button type="button" style="width: 100%; border:none; background:transparent" (mousedown)="mousedown(2)" (mouseup)="mouseup(2)" (mouseleave)="mouseup(2)"> <i class="glyphicon glyphicon-eye-open"></i></button>
+          </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success" ><i class="uk-icon-save"></i> {{ "change password"| translate }}</button>
+
+      </form>
+    </div>
+
+  </div>

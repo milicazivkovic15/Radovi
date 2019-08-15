@@ -1,0 +1,16 @@
+<span style="margin-left:15px; font-size:18px; font-weight: bold; float:left; margin-bottom:20px">{{fullName}} 
+<br><i style="font-weight: normal; font-size: 12;">{{myDate}}</i></span>
+
+<div class="col-md-8" style="clear:both; height:auto" >
+    
+<i>{{"Primljena poruka" | translate }}</i><br>
+<div id="qu" class="form-control" style="font-size: 20px; border-radius:5px; margin-top:0; max-width:100%; overflow:hidden; height:auto; background:#f5f5f5; color:#444444">{{text}}</div></div>
+<br>
+<div class="col-md-8 col-md-offset-4">
+
+<i>{{"Odgovor" | translate}}</i><br>
+<textarea message-position="top" id="msg" class="form-control" style="resize:none; width: 100%; border-radius:5px; overflow-x:hidden;overflow-y: auto; min-height: 100px" [(ngModel)]="message"></textarea><br>
+<br>
+<button class="btn btn-primary" style="float: right "(click)="sendEmail()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> {{ "Send" | translate }}</button>
+
+</div>

@@ -1,0 +1,81 @@
+<div class="menuOffset"></div>
+<div *ngIf="show==false" id="mojDIV">
+    <div class="loader"></div>
+</div>
+<md-card style="overflow: visible" id="rule" *ngIf="show==true" class="col-xs-12 col-sm-10 col-sm-offset-1">
+    <md-card-title>
+        {{"pravila" | translate}}
+        <button id="addRule" style="float:right; font-size: 14px" class="btn btn-success" (click)="addRule()"><i class="fa fa-plus" aria-hidden="true"></i> {{ "dodaj pravilo" | translate}}</button>
+    </md-card-title>
+    <md-card-content style="overflow: visible">
+        <div class="pera col-xs-12 col-md-6" style="padding: 0; width: 100%">
+            <div class="input-group col-xs-12 col-md-6" style="float: left; width: 50%">
+
+                <span class="input-group-addon">{{"Pretraga po" | translate}}</span>
+                <select class="form-control" [(ngModel)]="what" id="what" (change)="filterUndo()">
+            <option value="1" selected> {{"Uslovu" | translate}}</option>
+            <option *ngIf="notAgro==true" value="2">{{"Plantazi" | translate}}</option>
+            <option value="3">{{"Kulturi" | translate}}</option>
+        </select>
+            </div>
+            <div class="input-group col-xs-12 col-md-6 " style="float: left; width: 50%">
+
+                <input *ngIf="what==1" style=" border-top-left-radius:4px; border-bottom-left-radius:4px" type="text" class="form-control "
+                    [(ngModel)]="search" [ngModelOptions]="{standalone: true}" #sear (ngModelChange)="filter(sear.value)" (keyup)="focus(sear)" auto-complete
+                    [source]="searchList" [list-formatter]="showList" display-property-name="v1" value-property-name="v1">
+                <input *ngIf="what==2" style=" border-top-left-radius:4px; border-bottom-left-radius:4px" type="text" class="form-control "
+                    [(ngModel)]="search1" [ngModelOptions]="{standalone: true}" #sear (ngModelChange)="filter1(sear.value)" (keyup)="focus(sear)" auto-complete
+                    [source]="searchList1" [list-formatter]="showList1" display-property-name="Title" value-property-name="Title">
+                <input *ngIf="what==3" style=" border-top-left-radius:4px; border-bottom-left-radius:4px" type="text" class="form-control "
+                    [(ngModel)]="search2" [ngModelOptions]="{standalone: true}" #sear (ngModelChange)="filter2(sear.value)" (keyup)="focus(sear)" auto-complete
+                    [source]="searchList2" [list-formatter]="showList2" display-property-name="Title" value-property-name="Title">
+
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+            </div>
+        </div>
+        <br><br>
+        <div class="table-responsive" style="width: 100%">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>{{"pravilo1" | translate}}</th>
+                        <th>{{"uslov" | translate}}</th>
+                        <th>{{"kulture za koje vazi pravilo" | translate}}</th>
+                        <th *ngIf="notAgro==true">{{"parcele na kojima pravilo vazi" | translate}}</th>
+                        <th>{{"createdBy" | translate}}</th> 
+                        <!--Created by-->
+                        <th>{{"lastModified"| translate}}</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tr *ngFor="let rulee of filterRules; let i = index" id="rowID{{i}}">
+                    <td class="top-padd"><i (click)="toggle('rowID'+i)" *ngIf="rulee.culture.length>1 || rulee.parcelID.length>1" class="fa fa-angle-double-down fa-lg"></i></td>
+                    <td> {{rulee.message}} </td>
+                    <td> {{rulee.data}} </td>
+                    <td>
+                        <ul>
+                            <li *ngFor="let culture of rulee.culture">{{culture}}</li>
+                        </ul>
+                    </td>
+                    <td *ngIf="notAgro==true">
+                        <ul>
+                            <li *ngFor="let parcel of rulee.parcelID">{{parcel}}</li>
+                        </ul>
+                    </td>
+                    <td>{{ rulee.IDowner}}</td>
+                    <td>{{rulee.IDmodify}} <br> {{rulee.dateModify}}</td>
+                    <td colspan="2" *ngIf="rulee.defaultRule==true && notAgro==true">
+                        {{"Generalno pravilo" | translate}}
+                    </td>
+                    <td *ngIf="!(notAgro && rulee.defaultRule)"><button id="iz" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="{{'izmeni' | translate }}"
+                            (click)="updateRule(rulee)"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+                    <td *ngIf="!(notAgro && rulee.defaultRule)"> <button id="del" class="btn btn-danger" (click)="deleteRule(rulee)" data-toggle="tooltip" data-placement="bottom"
+                            title="{{'Obrisi'|translate}}"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+                </tr>
+            </table>
+        </div>
+
+    </md-card-content>
+</md-card>

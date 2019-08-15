@@ -1,0 +1,59 @@
+<div class="menuOffset"></div>
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 noPaddingCard" style="position:relative; top:-5px">
+        <md-card id="registruj" class="fakeCardWithMargin" style="padding:30px !important; margin: 0px; height: 100%">
+            <app-edit-permissions #workers [parentViewContainerRef]="viewContainerRef"></app-edit-permissions>
+        </md-card>
+        <md-card  class="fakeCard" style="margin: 0;padding:30px !important;">
+        <md-card-title class="">{{"Dodavanje novog radnika" | translate}}
+            <button class="btn btn-success" type="submit" *ngIf="canAdd" style="float: right; max-width: 180px;margin-right: 1%;" (click)="addWorker()"><i class="glyphicon glyphicon-plus"></i> {{"dodaj radnika" | translate}}</button>
+            <button class="btn btn-success" type="submit" *ngIf="!canAdd" style="float: right; max-width: 180px;margin-right: 1%; border:1px solid lightgray; background:white; color: lightgray" data-toggle="tooltip" title="Ne možete dodati novog radnika!" disabled><i class="glyphicon glyphicon-plus"></i> {{"dodaj radnika" | translate}}</button>
+        </md-card-title>
+        <md-card-content>
+        <div class="col-md-8 col-xs-12 input-group">
+            <input style="margin-top:20px; margin-bottom:5px; border-radius: 4px" type="text"  class="form-control" name="workerText" placeholder="{{ 'unesiUseriEmail' | translate }}" pattern-type="usernameOrEmail" message-sr="Morate uneti korisničko ime ili e-mail adresu" message-en="You are required to enter username or e-mail address" message-position="bottom"
+                [(ngModel)]="user.workerText" id="workerText" />
+        </div>
+        {{success}}
+        <div class="table-responsive" style="width: 100%;" *ngIf="!msg">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th><b>{{"ime parcele" | translate}}</b></th>
+                        <th>{{"pregled parcele" | translate}}</th>
+                        <th>{{"izmena podataka parcele" | translate}}</th>
+                        <th>{{"izmena pravila" | translate}}</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td class="top-padd"><b>{{"obelezi" | translate}}</b></td>
+                    <td><button md-button (click)="change(1)">{{viewMsg}}</button></td>
+                    <td><button md-button (click)="change(2)">{{editMsg}}</button></td>
+                    <td><button md-button (click)="change(3)">{{rulesMsg}}</button></td>
+                </tr>
+                <tr *ngFor="let parcel of parcels| paginate: { itemsPerPage: 10, currentPage: page }; let i = index ">
+                    <td>{{parcel.Title}}</td>
+                    <td><span class="material-switch ">
+                            <input (click)="check(1)" [ngModelOptions]="{standalone: true}" class="cursor" id="someSwitchOptionSuccess1{{i}}" name="someSwitchOption001" [(ngModel)]="parcel.View" type="checkbox"/>
+                            <label for="someSwitchOptionSuccess1{{i}}" class="label-success"></label>
+                            </span>
+                    </td>
+                    <td><span class="material-switch ">
+                            <input (click)="check(2)" [ngModelOptions]="{standalone: true}" class="cursor" id="someSwitchOptionSuccess2{{i}}" name="someSwitchOption001" [(ngModel)]="parcel.Edit" type="checkbox"/>
+                            <label for="someSwitchOptionSuccess2{{i}}" class="label-success"></label>
+                            </span>
+                    </td>
+                    <td><span class="material-switch ">
+                            <input (click)="check(3)" [ngModelOptions]="{standalone: true}" class="cursor" id="someSwitchOptionSuccess3{{i}}" name="someSwitchOption001" [(ngModel)]="parcel.Rules" type="checkbox"/>
+                            <label for="someSwitchOptionSuccess3{{i}}" class="label-success"></label>
+                            </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <span  style="float: right; font-size: 12px">
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</span>
+
+    </md-card-content>
+    </md-card>
+</div>

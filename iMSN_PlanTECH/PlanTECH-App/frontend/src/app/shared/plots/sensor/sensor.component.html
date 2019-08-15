@@ -1,0 +1,73 @@
+<div class="menuOffset"></div>
+<md-card id="content" class="fakeCardWithSideMenu noCard">
+  <md-card-title>
+    Senzor za {{data.sensor.ime}}
+    <span style="float: right;">
+            <button type="submit" class="btn btn-primary" (click)="edit()"><i class="{{icon}}"></i> {{text}}</button>
+            <button *ngIf="editable" type="submit" class="btn btn-danger" style="margin-left: 25px;" (click)="revert()"><i class="fa fa-reply fa-lg"></i> {{"otkazi" | translate}}</button>
+            <button *ngIf="!editable" type="submit" class="btn btn-danger" style="margin-left: 25px;" (click)="delete()"><i class="uk-icon-remove"></i> {{"izbrisi" | translate}}</button>
+        </span>
+  </md-card-title>
+  <md-card-content class="noPaddingCard" style="top: -30px !important;">
+    <div class="fakeCardWithMargin" [ngClass]="{'full':editable}">
+      <md-card *ngIf="!editable">
+        <md-card-title class="noCard">{{"osnovni podaci" | translate}}</md-card-title>
+        Tip senzora: {{data.sensor.ime}}<br> IP adresa: {{data.sensor.IP}}<br> Datum dodavanja senzora: {{date}}
+      </md-card>
+      <md-card *ngIf="!editable && parcels.length!=0">
+        <div class="table-responsive" style="width: 100%; padding: 0;">
+                    <table class="table table-hover" style="height:150px">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center;width: 100%;">Povezane parcele</th>
+                            </tr>
+                        </thead>
+                        <tr *ngFor="let p of parcels">
+                            <td style="text-align: center;" style="width: 100%;"> {{p.Title}}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            
+      </md-card>
+      <md-card *ngIf="editable">
+        <md-card-title class="noCard">{{"osnovni podaci" | translate}}</md-card-title>
+        <div class="col-xs-12 col-md-6">
+          <span style="float:left; margin-bottom:10px;">Tip senzora:&nbsp;</span>
+          <div style="float:left; width:40%; margin-bottom:10px;"><select class="form-control" [(ngModel)]="data.sensor.SensorType" #select (change)="change(select.value)">
+                <option *ngFor="let type of types" value="{{type.id}}">{{type.ime}}</option>
+              </select></div><br>
+          <span style="float:left; clear:left;">IP adresa:&nbsp;</span>
+          <div style="float:left; width:40%"><input class="form-control" type="text" [(ngModel)]="data.sensor.IP" id="ip" pattern-type="ip" message-sr="IP adresa nema odgovarajući oblik! <br> 0-255.0-255.0-255.0-255" message-en="IP address is not in the correct format! <br> 0-255.0-255.0-255.0-255"
+              message-position="top"></div>
+        </div>
+        <div class="col-xs-12 col-md-6 marginTop">
+          <div *ngIf="allParcels.length!=0" class="table-responsive" style="width: 100%">
+            <table class="table table-hover">
+                    <thead><tr >
+                        <th>Parcele</th>
+                        <th>&nbsp;</th>
+                    </tr></thead>
+                    <tr  *ngFor="let p of allParcels; let i = index">
+                      <td>{{p.Title}}</td>
+                      <td style="text-align: center;"><span  style="margin-left: -15px;" class="material-switch ">
+                      <input class="cursor" id="2someSwitchOptionSuccess2{{i}}" name="someSwitchOption001" [(ngModel)]="p.used"  type="checkbox"/>
+                      <label for="2someSwitchOptionSuccess2{{i}}" class="label-success"></label>
+                      </span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </md-card>
+    </div>
+    <div class="fakeCard" [ngClass]="{'full':editable}" style="padding:0">
+      <md-card>
+        <sensor-map #map></sensor-map>
+      </md-card>
+    </div>
+    <md-card *ngIf="!editable" class="col-xs-12" style="position:relative; top:-5px; margin-left: 0">
+      <plotly-chart #chart *ngIf="message==''" style="width:100%"></plotly-chart>
+      <h3 *ngIf="message!=''" style="text-align: center; width:100%">{{message}}</h3>
+    </md-card>
+  </md-card-content>
+</md-card>

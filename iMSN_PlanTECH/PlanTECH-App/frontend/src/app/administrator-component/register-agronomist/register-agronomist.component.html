@@ -1,0 +1,57 @@
+<div class="menuOffset"></div>
+<md-card class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+  <md-card-title>{{"Dodaj agronoma" | translate}}</md-card-title>
+  <md-card-content>
+    <form id="cornyAddAgro" novalidate #regForm="ngForm" (ngSubmit)="registerAgro(regForm)">
+
+        <div class="input-group" >
+          <input type="text" style="min-width: 100%" class="form-control" aria-describedby="basic-addon1" placeholder="{{ 'Username'| translate }}" value="" [(ngModel)]="user.username" id="name" name="name" #name="ngModel" required="required"  pattern-type="username" message-sr="Korisničko ime može da sadrži samo slova i brojeve. Broj karaktera od 8 do 16" message-en="Username can contain only letters and numbers. Length should be between 8 and 16 characters" message-position="top" />
+
+          <span class="input-group-addon"  id="basic-addon1" style="min-width: 50px">
+              <i class="glyphicon glyphicon-user"></i>
+          </span>
+        </div>
+        
+        <br>
+        <div class="input-group">
+          <input type="{{type1}}" style="min-width: 100%" class="form-control" aria-describedby="basic-addon1" placeholder="{{ 'Password'| translate }}" name="siff" id="siff" #siff="ngModel" value="" [(ngModel)]="user.password" required="required" pattern-type="pass" message-sr="Lozinka mora da sadrži najmanje jedno malo i jedno veliko slovo, kao i najmanje jedan broj i jedan specijalni karakter (-!?_*@). Broj karaktera od 8 do 16" message-en="Password must contain at least one lower and one upper letter, and also at least one digit and special character (-!?_*@). Length should be between 8 and 16 characters" message-position="top" />
+
+          <div class="input-group-addon" id="basic-addon1" style="min-width: 50px; padding: 0px">
+            <button class="hideButton" type="button"  style="width: 100%;"  (mousedown)="mousedown(1)" (mouseup)="mouseup(1)" (mouseleave)="mouseup(1)"> <i class="glyphicon glyphicon-eye-open"></i></button>
+          </div>
+        </div>
+        <br>
+        <div class="input-group">
+          <input type="text" style="min-width: 100%" class="form-control" aria-describedby="basic-addon1" placeholder="E-mail" value="" [(ngModel)]="user.email" id="Email" name="Email" #Email="ngModel" required="required"  pattern-type="email" message-sr="E-mail adresa nije u ispravnom obliku!" message-en="E-mail address is not in the correct format" message-position="top"  />
+  
+          <span class="input-group-addon" id="basic-addon1" style="min-width: 50px">
+            <i class="glyphicon glyphicon-envelope"></i>
+          </span>
+        </div>
+        <br>
+        <div class="input-group">
+          <input style="width:50%" type="text" name="fname" class="form-control" placeholder="{{ 'FirstName'| translate }}" aria-describedby="basic-addon1" value="" [(ngModel)]="user.fname" id="fname" required="required"  pattern-type="alpha" message-sr="Ime je jedna reč i treba da sadrži samo slova" message-en="First name is one word, and should contain only letters" message-position="top" />
+          <input style="width:50%" type="text" name="lname" class="form-control" aria-describedby="basic-addon1" placeholder="{{ 'LastName'| translate }}" value="" [(ngModel)]="user.lname" id="lname" required="required"  pattern-type="alpha" message-sr="Prezime je jedna reč i treba da sadrži samo slova" message-en="Last name is one word, and should contain only letters" message-position="top"/>
+          
+            <span class="input-group-addon" id="basic-addon1" style="min-width: 50px">  <i class="glyphicon glyphicon-user"></i></span>
+        </div>
+        
+        <br>
+        <div class="input-group">
+          <input type="text" style="min-width: 100%" name="phone" class="form-control" aria-describedby="basic-addon1" placeholder="{{ 'Phone'| translate }}" value="" [(ngModel)]="user.phone" id="Phone"  pattern-type="phone" message-sr="Broj telefona nije u ispravnom obliku!" message-en="Phone number is not in the correct format" message-position="top"/>
+          <div class="input-group-addon" id="basic-addon1" style="min-width: 50px">
+            <i class="glyphicon glyphicon-earphone"></i>
+          </div>
+        </div>
+        <br>
+        <div class="input-group" style="width:100%">
+          <select class="form-control" style="border-radius:4px; width:100%" #sel (change)="change(sel)">
+              <option value="2">Agronom</option>
+              <option value="1">Administrator</option>
+          </select>
+        </div>
+        <br>
+        <button class="btn btn-success"><i class="glyphicon glyphicon-check"></i> {{ "RegAgronom"| translate }} {{ accType | translate}}</button>
+      </form>
+  </md-card-content>
+</md-card>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="imsn.imsn_android.Login"
+    android:background="@android:color/background_light">
+
+    <Button
+        android:text="Prijavi se"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:background="@android:color/holo_blue_light"
+        android:layout_marginBottom="78dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/background_light" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/password"
+        android:layout_above="@+id/login"
+        android:layout_alignLeft="@+id/username"
+        android:layout_alignStart="@+id/username"
+        android:textCursorDrawable="@android:color/holo_blue_light"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:layout_marginBottom="14dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textCursorDrawable="@android:color/holo_blue_light"        android:ems="10"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:id="@+id/username"
+        android:layout_above="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/imageView2"
+        android:minWidth="200dp"
+        android:minHeight="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/en"
+        android:id="@+id/en"
+        android:background="@android:color/background_light"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/sr"
+        android:id="@+id/sr"
+        android:background="@android:color/background_light"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/en"
+        android:layout_toStartOf="@+id/en" />
+
+    <TextView
+        android:text="Lozinka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textColor="@android:color/black"
+        android:layout_above="@+id/password"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Korisničko ime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textColor="@android:color/black"
+        android:layout_above="@+id/username"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

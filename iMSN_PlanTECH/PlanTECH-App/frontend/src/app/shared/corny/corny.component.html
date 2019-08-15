@@ -1,0 +1,19 @@
+<div class="cornyContent">
+  <div class="bubble">
+    <p *ngIf="ind==-1">{{"Zdravo ja sam Korenko, tvoj virtuelni asistent" | translate}}.</p>
+    <p *ngIf="ind!=-1 && ind<msgs.length">{{message}}</p>
+    <div class="hideout"></div>
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button *ngIf="ind!=-1" class="btn btn-primary" (click)="prevous()"><i class="glyphicon glyphicon-chevron-left"></i></button></td>
+          <td><button class="btn btn-danger" (click)="close()">{{"Close" | translate}}</button></td>
+          <td><button *ngIf="ind<msgs.length-1" class="btn btn-primary" (click)="next()"><i class="glyphicon glyphicon-chevron-right"></i></button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <img class="corny" src={{imagePath}}>
+</div>
+<div class="cornyBackground"></div>
+<img class={{gifClass}} *ngIf="gifPath" src={{gifPath}} style="display:none">

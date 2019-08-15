@@ -1,0 +1,33 @@
+<div class="menuOffset"></div>
+<md-card class="col-md-10 col-md-offset-1">
+  <md-card-title>{{'Novi korisnici'| translate}} </md-card-title>
+  <md-card-content class="noPaddingCard">
+      <div class="table-responsive" style="width:100%">
+         <table id="cornyAddUser" class="table table-hover">
+            <tr>
+              <th>{{"ime i prezime" | translate}}</th>
+              <th>{{"Username"|translate}}</th>
+              <th>E-mail</th>
+              <th>{{"Phone"|translate}}</th>
+              <th>{{"Tip korisnika" | translate}}</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr *ngFor="let account of accounts | paginate: { itemsPerPage: 9, currentPage: page }; let i = index">
+              <td class="top-padd">{{account.fullName}}</td>
+              <td class="top-padd">{{account.username}}</td>
+              <td class="top-padd"><i>{{account.email}}</i></td>
+              <td class="top-padd">{{account.phone}}</td>
+              <td class="top-padd">{{account.type | translate}}</td>
+              <td><button class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="{{'deposit slip' | translate }}" (click)="zoomPicture(account.imgUrl)"><i class="fa fa-eye" aria-hidden="true"></i></button></td>
+              <td><button class="btn btn-success" data-toggle="tooltip" data-placement="bottom" title="{{'approved'|translate}}" (click)="acceptAccount(account.ID)"><i class="fa fa-check" aria-hidden="true"></i></button></td>
+              <td><button class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="{{'Reject'|translate}}" (click)="refuseAccount(account.ID)"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+            </tr>
+          </table>  
+        </div>     
+      <span class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin: 3% 0%; width: 100%; text-align: right;">
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+      </span>
+  </md-card-content>
+</md-card>
