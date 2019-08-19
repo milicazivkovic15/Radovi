@@ -1,4 +1,7 @@
-/* Problem - Naci najveci poligon od ucitanih tacaka */
+/* Problem - Paralelno programiranje 
+ Naci najveci poligon od ucitanih tacaka */
+
+
 #include<cuda_runtime.h>
 #include<stdio.h>
 #include<stdlib.h>
