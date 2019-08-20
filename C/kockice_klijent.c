@@ -1,3 +1,11 @@
+/*
+Napisati 1 serverski i 4 klijentska programa koji simuliraju partiju igre NE LJUTI SE ČOVEČE komunicirajudi
+upotrebom redova za poruke. Svaki igrač ima samo jednu figuricu na raspolaganju. Igrači igraju prema
+redosledu prijavljivanja. Svaki igrač igru može završiti na 2 načina:
+1. pojeden je, nakon čega nema povratka u igru
+2. stigao je do kraja.
+Igra se završava kada vise nema igrača na tabli.
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
