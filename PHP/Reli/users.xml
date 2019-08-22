@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user> 
+	   <fname>Branko</fname>
+	   <lname>Arsic</lname>
+	   <log>
+			<username aktivan="1">bane</username>
+			<password>bane1708</password>
+	   </log>
+       <email>brankoarsic@kg.ac.rs</email>
+       <group>register</group>
+    </user>
+    <user>
+	    <fname>Boban</fname>
+	    <lname>Stojanovic</lname>
+		<log>
+			<username aktivan="0">bobi</username>
+			<password>stoj</password>
+		</log>
+        <email>cofi@yahoo.com</email>
+        <group>admin</group>
+    </user>
+    <user>
+	    <fname>Adam</fname>
+	    <lname>Stanojevic</lname>
+		<log>
+			<username aktivan="1">sadam</username>
+			<password>operativni</password>
+		</log>
+        <email>opt@gmail.com</email>
+        <group>admin</group>
+    </user>
+    <user>
+	    <fname>Milos</fname>
+	    <lname>Ivanovic</lname>
+		<log>
+			<username aktivan="1">misa</username>
+			<password>ivam</password>
+		</log>
+        <email>somi@yahoo.com</email>
+        <group>register</group>
+    </user>
+</users>
