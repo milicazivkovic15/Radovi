@@ -9,4 +9,5 @@ Rad u okviru predmeta "Web programiranje" na III godini studija.
 3) otvoriti Properties->Sources i u "Copy to folder" uneti putanju do "/wamp64/www" direktorijuma
 4) otvoriti Properties->Run Configuration i u "Project URL" uneti  http://localhost:8080/Naziv_Projekta
 5) u phpmyadmin je potrebno je uraditi "import" SQL upita koji se nalazi u folderu projekta.
-6) porkrenuti projekat
+6) unzip-ovati fajl doctrine.zip. Folder "doctrine" dodati u root projekta ( Samo za projekte : Reli i Virus )
+7) porkrenuti projekat
