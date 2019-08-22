@@ -54,13 +54,13 @@
         $sql = "Select * From vesti";
         $pdp = $baza->dbh->query($sql);
         $niz = $pdp->fetchAll();
-        echo "<h2>BIA analiza - autorizovani pristup - samo kliknuta rec</h2>";
+        echo "<h2>BIA analiza - autorizovani pristup - Izabrana rec: <span  style='color:red;'>".$_GET['c']."</span></h2>";
         echo "<table style='border:1px solid black'>";
         foreach ($niz as $vest) {
             $reci = explode(" ", $vest[2]);
             foreach ($reci as $rec1) {
                 $rec = strtolower($rec1);
-                if ($rec == $_GET['c']) {
+                if (strpos($rec, $_GET['c']) !== false){
                     echo "<tr>";
                     echo "<td style='border:1px solid black'><a href=''>$vest[1]</a></td>";
                     echo "<td style='border:1px solid black'>$vest[2]</td>";
