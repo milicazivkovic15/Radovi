@@ -78,15 +78,16 @@ if(isset($_SESSION['usr'])){
                          ->from("korisnik");
          $users1=$upit->fetchArray(Doctrine_Core::HYDRATE_ARRAY);
     
-        echo '<br><br>Registarski broj: <input type="text" name="tablice" value="" /><br>';
+        echo '<br><br><h2>Forma za izmenu podataka automobila</h2>';
+        echo 'Registarski broj: <input type="text" name="tablice" value="" /><br>';
         echo 'Datum registracije : <input type="text" name="datum" value="" />(DD.MM.YYYY)<br>';  
         
-         
-     echo "<select name='lista'>";
-     foreach ($users1 as $u1){
-        echo "<option>".$u1['fname']." ".$u1['lname']."</option>";
-     }
-     echo "</select>";
+        echo "Vlasnik: ";
+        echo "<select name='lista'>";
+        foreach ($users1 as $u1){
+           echo "<option>".$u1['fname']." ".$u1['lname']."</option>";
+        }
+        echo "</select><br><br>";
         echo '<input type="submit" value="Izmeni" name="izmeni" />';
         echo "<input type='hidden' name='skriveno' value=".$_GET['id']." />";
                 
