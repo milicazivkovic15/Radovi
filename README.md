@@ -1,5 +1,5 @@
 # Radovi
-Seminarski radovi na fakultetu, spremljeni kolokvijumi, vezbe
+Seminarski radovi na fakultetu, kolokvijumi, vezbe
 
 
 
